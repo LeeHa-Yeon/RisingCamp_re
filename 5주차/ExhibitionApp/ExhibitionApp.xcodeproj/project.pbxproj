@@ -21,6 +21,7 @@
 		9F9AC59527503BBC000882C9 /* ImgSearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */; };
 		9F9AC59A2750427B000882C9 /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC5992750427B000882C9 /* LodingViewController.swift */; };
 		9F9AC59D27504315000882C9 /* moveToVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59C27504315000882C9 /* moveToVC.swift */; };
+		9F9AC59F27504547000882C9 /* 1873-foto-icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F9AC59E27504547000882C9 /* 1873-foto-icon.json */; };
 		9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */; };
 		B7E0B99623145F507073DA6F /* Pods_ExhibitionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgSearchParameter.swift; sourceTree = "<group>"; };
 		9F9AC5992750427B000882C9 /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
 		9F9AC59C27504315000882C9 /* moveToVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveToVC.swift; sourceTree = "<group>"; };
+		9F9AC59E27504547000882C9 /* 1873-foto-icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1873-foto-icon.json"; sourceTree = "<group>"; };
 		9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExhibitionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,6 +211,7 @@
 		9F9AC59627503C03000882C9 /* JSONFile */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC59E27504547000882C9 /* 1873-foto-icon.json */,
 			);
 			path = JSONFile;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				9F520F2E274E891F00EB1824 /* LaunchScreen.storyboard in Resources */,
 				9F520F2B274E891F00EB1824 /* Assets.xcassets in Resources */,
+				9F9AC59F27504547000882C9 /* 1873-foto-icon.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

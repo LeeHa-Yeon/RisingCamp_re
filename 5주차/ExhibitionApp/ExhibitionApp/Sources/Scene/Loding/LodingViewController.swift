@@ -7,12 +7,17 @@
 
 import UIKit
 import Lottie
+import Then
 
 
 
 class LodingViewController: UIViewController {
 
-    let animationView = AnimationView(name:"")
+    lazy var animationView = AnimationView(name:"1873-foto-icon").then {
+        $0.frame = CGRect(x:0, y:0, width: 200, height: 200)
+        $0.center = self.view.center
+        $0.contentMode = .scaleAspectFit
+    }
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -29,16 +34,13 @@ class LodingViewController: UIViewController {
     //MARK: - Functions
     
     func setAnimationView(){
-        animationView.frame = CGRect(x:0, y:0, width: 200, height: 200)
-        animationView.center = self.view.center
-        animationView.contentMode = .scaleAspectFit
-        view.addSubview(animationView)
+        self.view.addSubview(animationView)
     }
     
     func playAnimationView(){
         self.animationView.play()
         self.animationView.loopMode = .loop
-        let time = DispatchTime.now() + .seconds(1)
+        let time = DispatchTime.now() + .seconds(4)
         DispatchQueue.main.asyncAfter(deadline: time) {
             self.moveToTabBarVC()
         }
