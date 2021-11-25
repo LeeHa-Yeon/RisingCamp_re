@@ -15,6 +15,7 @@
 		9F9AC586274FC210000882C9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC585274FC210000882C9 /* SettingViewController.swift */; };
 		9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */; };
 		9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */; };
+		9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */; };
 		9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */; };
 		B7E0B99623145F507073DA6F /* Pods_ExhibitionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		9F9AC585274FC210000882C9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCell.swift; sourceTree = "<group>"; };
 		9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCollectionHeaderView.swift; sourceTree = "<group>"; };
+		9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExhibitionVC + CollectionView.swift"; sourceTree = "<group>"; };
 		9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExhibitionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 		9F9AC581274FC0F8000882C9 /* Exhibition */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC58D274FFD31000882C9 /* Extension */,
 				9F9AC587274FD42F000882C9 /* Controllers */,
 				9F9AC588274FD436000882C9 /* Cells */,
 			);
@@ -177,6 +180,14 @@
 				9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F9AC58D274FFD31000882C9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		EA95B93E7CA0B0A5D060A0BB /* Pods */ = {
@@ -306,6 +317,7 @@
 				9F520F22274E891E00EB1824 /* AppDelegate.swift in Sources */,
 				9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */,
 				9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */,
+				9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */,
 				9F520F24274E891E00EB1824 /* SceneDelegate.swift in Sources */,
 				9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */,
 				9F9AC583274FC150000882C9 /* ExhibitionViewController.swift in Sources */,

@@ -16,12 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MARK: - TabBarTintColor 변경
         if #available(iOS 15, *) {
-            let appearance = UITabBarAppearance()
+            let appearanceTB = UITabBarAppearance()
             let tabBar = UITabBar()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = .white
-            tabBar.standardAppearance = appearance;
-            UITabBar.appearance().scrollEdgeAppearance = appearance
+            appearanceTB.configureWithOpaqueBackground()
+            appearanceTB.backgroundColor = .white
+            tabBar.standardAppearance = appearanceTB;
+            UITabBar.appearance().scrollEdgeAppearance = appearanceTB
+            
+            let appearanceNV = UINavigationBarAppearance()
+            let NavigationBar = UINavigationBar()
+            appearanceNV.configureWithOpaqueBackground()
+            appearanceNV.backgroundColor = .white
+            NavigationBar.standardAppearance = appearanceNV;
+            UINavigationBar.appearance().scrollEdgeAppearance = appearanceNV
         }
         // Override point for customization after application launch.
         return true

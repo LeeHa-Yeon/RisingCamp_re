@@ -17,9 +17,8 @@ class TabBarViewController: UITabBarController {
     
     private lazy var settingVC = SettingViewController().then {
         $0.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(systemName: "gearshape.2"), tag: 1)
+        
     }
-    
-    
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -29,9 +28,10 @@ class TabBarViewController: UITabBarController {
     
     //MARK: - Functions
     func setTabBar(){
+        let settingNV = UINavigationController(rootViewController: settingVC)
         // TabBar Tint Color는 appDelegate에서 설정이 가능하고
         // 만약 색상이 아닌 TabBar 경계만 나오도록 설정하고 싶다면 tabBar.isTranslucent = false을 사용하면 된다.
-        viewControllers = [exhibitionVC,settingVC]
+        viewControllers = [exhibitionVC,settingNV]
     }
     
 }
