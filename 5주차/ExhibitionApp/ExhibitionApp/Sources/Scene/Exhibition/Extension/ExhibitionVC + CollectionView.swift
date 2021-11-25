@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 //MARK: - DataSource
 extension ExhibitionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return documents.count
     }
     
     // Header ,Footer의 뷰를 리턴해주는 메소드
@@ -27,8 +28,13 @@ extension ExhibitionViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "exhibitionCell", for: indexPath) as? ExhibitionCell else {
             return UICollectionViewCell()
         }
+        
         cell.setUI()
-        cell.dummyData()
+        cell.dummyData() // 임시
+        if let url: URL = URL(string: self.documents[indexPath.row].image_url){
+            cell.exhibitionImgView.kf.indicatorType = .activity
+            cell.exhibitionImgView.kf.setImage(with:url)
+        }
         return cell
     }
     

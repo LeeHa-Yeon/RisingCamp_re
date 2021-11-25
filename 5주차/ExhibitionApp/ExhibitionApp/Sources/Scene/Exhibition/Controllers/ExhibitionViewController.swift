@@ -11,6 +11,9 @@ import Then
 
 final class ExhibitionViewController: UIViewController {
     
+    let apiManager = APIManager.shared
+    var documents = [Document]()
+    
     private let layout = UICollectionViewFlowLayout().then{
         $0.minimumLineSpacing = 10 // 위아래 간격 최소값
         $0.minimumInteritemSpacing = 10 // 좌우 간격 최소값
@@ -25,16 +28,32 @@ final class ExhibitionViewController: UIViewController {
     }
     
     //MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollecionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        loadAPI()
+    }
+    
     //MARK: - Functions
+    
     func setCollecionView(){
         view.addSubview(collecionView)
         collecionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+    }
+    
+    func loadAPI(){
+        apiManager.requestImgSearch(parameter: ImgSearchParameter()) { response in
+            self.documents = response.documents
+            DispatchQueue.main.async {
+                self.collecionView.reloadData()
+            }
         }
     }
     

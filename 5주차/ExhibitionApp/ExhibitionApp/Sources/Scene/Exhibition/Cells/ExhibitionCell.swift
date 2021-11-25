@@ -11,7 +11,7 @@ import Then
 final class ExhibitionCell: UICollectionViewCell {
     static let identifier: String = "exhibitionCell"
     
-    private lazy var exhibitionImgView = UIImageView().then {
+    lazy var exhibitionImgView = UIImageView().then {
         $0.contentMode = .scaleAspectFill
         // 이미지뷰보다 이미지가 클 때 벗어나기에 설정해둔 것
         $0.clipsToBounds = true
