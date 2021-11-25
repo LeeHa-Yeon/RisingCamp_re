@@ -17,6 +17,8 @@
 		9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */; };
 		9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */; };
 		9F9AC59127503728000882C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59027503728000882C9 /* APIManager.swift */; };
+		9F9AC59327503BAC000882C9 /* ImgSearchResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59227503BAC000882C9 /* ImgSearchResponseData.swift */; };
+		9F9AC59527503BBC000882C9 /* ImgSearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */; };
 		9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */; };
 		B7E0B99623145F507073DA6F /* Pods_ExhibitionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCollectionHeaderView.swift; sourceTree = "<group>"; };
 		9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExhibitionVC + CollectionView.swift"; sourceTree = "<group>"; };
 		9F9AC59027503728000882C9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9F9AC59227503BAC000882C9 /* ImgSearchResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgSearchResponseData.swift; sourceTree = "<group>"; };
+		9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgSearchParameter.swift; sourceTree = "<group>"; };
 		9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExhibitionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +114,7 @@
 		9F9AC57B274FC052000882C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC59627503C03000882C9 /* JSONFile */,
 				9F9AC57F274FC09C000882C9 /* Extensions */,
 				9F520F2A274E891F00EB1824 /* Assets.xcassets */,
 			);
@@ -146,6 +151,8 @@
 		9F9AC580274FC0A9000882C9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC59227503BAC000882C9 /* ImgSearchResponseData.swift */,
+				9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +198,13 @@
 				9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9F9AC59627503C03000882C9 /* JSONFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSONFile;
 			sourceTree = "<group>";
 		};
 		EA95B93E7CA0B0A5D060A0BB /* Pods */ = {
@@ -320,9 +334,11 @@
 				9F520F22274E891E00EB1824 /* AppDelegate.swift in Sources */,
 				9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */,
 				9F9AC59127503728000882C9 /* APIManager.swift in Sources */,
+				9F9AC59327503BAC000882C9 /* ImgSearchResponseData.swift in Sources */,
 				9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */,
 				9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */,
 				9F520F24274E891E00EB1824 /* SceneDelegate.swift in Sources */,
+				9F9AC59527503BBC000882C9 /* ImgSearchParameter.swift in Sources */,
 				9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */,
 				9F9AC583274FC150000882C9 /* ExhibitionViewController.swift in Sources */,
 			);
