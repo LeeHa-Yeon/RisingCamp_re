@@ -19,6 +19,8 @@
 		9F9AC59127503728000882C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59027503728000882C9 /* APIManager.swift */; };
 		9F9AC59327503BAC000882C9 /* ImgSearchResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59227503BAC000882C9 /* ImgSearchResponseData.swift */; };
 		9F9AC59527503BBC000882C9 /* ImgSearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */; };
+		9F9AC59A2750427B000882C9 /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC5992750427B000882C9 /* LodingViewController.swift */; };
+		9F9AC59D27504315000882C9 /* moveToVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59C27504315000882C9 /* moveToVC.swift */; };
 		9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */; };
 		B7E0B99623145F507073DA6F /* Pods_ExhibitionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		9F9AC59027503728000882C9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9F9AC59227503BAC000882C9 /* ImgSearchResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgSearchResponseData.swift; sourceTree = "<group>"; };
 		9F9AC59427503BBC000882C9 /* ImgSearchParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgSearchParameter.swift; sourceTree = "<group>"; };
+		9F9AC5992750427B000882C9 /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
+		9F9AC59C27504315000882C9 /* moveToVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveToVC.swift; sourceTree = "<group>"; };
 		9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExhibitionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +118,7 @@
 		9F9AC57B274FC052000882C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC59B275042F8000882C9 /* Protocol */,
 				9F9AC59627503C03000882C9 /* JSONFile */,
 				9F9AC57F274FC09C000882C9 /* Extensions */,
 				9F520F2A274E891F00EB1824 /* Assets.xcassets */,
@@ -134,7 +139,8 @@
 		9F9AC57D274FC069000882C9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */,
+				9F9AC5972750424A000882C9 /* Loding */,
+				9F9AC5982750425D000882C9 /* TabBar */,
 				9F9AC581274FC0F8000882C9 /* Exhibition */,
 				9F9AC584274FC1EC000882C9 /* Setting */,
 			);
@@ -205,6 +211,30 @@
 			children = (
 			);
 			path = JSONFile;
+			sourceTree = "<group>";
+		};
+		9F9AC5972750424A000882C9 /* Loding */ = {
+			isa = PBXGroup;
+			children = (
+				9F9AC5992750427B000882C9 /* LodingViewController.swift */,
+			);
+			path = Loding;
+			sourceTree = "<group>";
+		};
+		9F9AC5982750425D000882C9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		9F9AC59B275042F8000882C9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9F9AC59C27504315000882C9 /* moveToVC.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		EA95B93E7CA0B0A5D060A0BB /* Pods */ = {
@@ -331,12 +361,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9AC586274FC210000882C9 /* SettingViewController.swift in Sources */,
+				9F9AC59A2750427B000882C9 /* LodingViewController.swift in Sources */,
 				9F520F22274E891E00EB1824 /* AppDelegate.swift in Sources */,
 				9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */,
 				9F9AC59127503728000882C9 /* APIManager.swift in Sources */,
 				9F9AC59327503BAC000882C9 /* ImgSearchResponseData.swift in Sources */,
 				9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */,
 				9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */,
+				9F9AC59D27504315000882C9 /* moveToVC.swift in Sources */,
 				9F520F24274E891E00EB1824 /* SceneDelegate.swift in Sources */,
 				9F9AC59527503BBC000882C9 /* ImgSearchParameter.swift in Sources */,
 				9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */,

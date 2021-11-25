@@ -19,7 +19,7 @@ final class ExhibitionCell: UICollectionViewCell {
         $0.backgroundColor = #colorLiteral(red: 1, green: 0.7379342914, blue: 1, alpha: 1)
     }
     
-    private lazy var subTitleLabel = UILabel().then {
+    lazy var subTitleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .white
     }
@@ -38,8 +38,7 @@ final class ExhibitionCell: UICollectionViewCell {
     //MARK: - Functions
     
     func dummyData(){
-        titleLabel.text = "타이틀라벨"
-        subTitleLabel.text = "서브타이틀"
+        titleLabel.text = "포메라니안"
         descriptionLabel.text = "설명설명"
     }
     

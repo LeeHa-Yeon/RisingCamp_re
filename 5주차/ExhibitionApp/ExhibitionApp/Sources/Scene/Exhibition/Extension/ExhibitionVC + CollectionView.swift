@@ -31,6 +31,7 @@ extension ExhibitionViewController: UICollectionViewDataSource {
         
         cell.setUI()
         cell.dummyData() // 임시
+        cell.subTitleLabel.text = "서브타이틀 \(indexPath.row + 1)"
         if let url: URL = URL(string: self.documents[indexPath.row].image_url){
             cell.exhibitionImgView.kf.indicatorType = .activity
             cell.exhibitionImgView.kf.setImage(with:url)
