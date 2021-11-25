@@ -16,6 +16,7 @@
 		9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */; };
 		9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */; };
 		9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */; };
+		9F9AC59127503728000882C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC59027503728000882C9 /* APIManager.swift */; };
 		9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */; };
 		B7E0B99623145F507073DA6F /* Pods_ExhibitionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCell.swift; sourceTree = "<group>"; };
 		9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCollectionHeaderView.swift; sourceTree = "<group>"; };
 		9F9AC58E274FFD47000882C9 /* ExhibitionVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExhibitionVC + CollectionView.swift"; sourceTree = "<group>"; };
+		9F9AC59027503728000882C9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExhibitionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		9F9AC579274FBFEC000882C9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC59027503728000882C9 /* APIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				9F9AC586274FC210000882C9 /* SettingViewController.swift in Sources */,
 				9F520F22274E891E00EB1824 /* AppDelegate.swift in Sources */,
 				9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */,
+				9F9AC59127503728000882C9 /* APIManager.swift in Sources */,
 				9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */,
 				9F9AC58F274FFD47000882C9 /* ExhibitionVC + CollectionView.swift in Sources */,
 				9F520F24274E891E00EB1824 /* SceneDelegate.swift in Sources */,
@@ -389,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -444,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -10,7 +10,7 @@ target 'ExhibitionApp' do
   pod 'Then'
   pod 'Kingfisher', '~> 7.0'
   pod 'lottie-ios'
-  pod 'Alamofire', '~> 5.4'
+  pod 'Alamofire'
   pod 'CollectionViewPagingLayout'
   
 end
