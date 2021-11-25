@@ -8,4 +8,9 @@ target 'ExhibitionApp' do
   # Pods for ExhibitionApp
   pod 'SnapKit', '~> 5.0.0'
   pod 'Then'
+  pod 'Kingfisher', '~> 7.0'
+  pod 'lottie-ios'
+  pod 'Alamofire', '~> 5.4'
+  pod 'CollectionViewPagingLayout'
+  
 end
