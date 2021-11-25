@@ -6,24 +6,19 @@
 //
 
 import UIKit
+import Then
 
 class TabBarViewController: UITabBarController {
     
-    private lazy var exhibitionViewController: UIViewController = {
-        let viewController = ExhibitionViewController()
-        let tabBarItem = UITabBarItem(title: "전시회",image: UIImage(systemName: "squareshape.dashed.squareshape"),tag: 0)
-        viewController.tabBarItem = tabBarItem
+    private lazy var exhibitionVC = ExhibitionViewController().then {
+        $0.tabBarItem = UITabBarItem(title: "전시회",image: UIImage(systemName: "squareshape.dashed.squareshape"),tag: 0)
         
-        return viewController
-    }()
+    }
     
-    private lazy var settingViewController: UIViewController = {
-        let viewController = SettingViewController()
-        let tabBarItem = UITabBarItem(title: "Setting", image: UIImage(systemName: "gearshape.2"), tag: 1)
-        viewController.tabBarItem = tabBarItem
-        
-        return viewController
-    }()
+    private lazy var settingVC = SettingViewController().then {
+        $0.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(systemName: "gearshape.2"), tag: 1)
+    }
+    
     
     
     //MARK: - LifeCycle
@@ -36,7 +31,7 @@ class TabBarViewController: UITabBarController {
     func setTabBar(){
         // TabBar Tint Color는 appDelegate에서 설정이 가능하고
         // 만약 색상이 아닌 TabBar 경계만 나오도록 설정하고 싶다면 tabBar.isTranslucent = false을 사용하면 된다.
-        viewControllers = [exhibitionViewController,settingViewController]
+        viewControllers = [exhibitionVC,settingVC]
     }
     
 }

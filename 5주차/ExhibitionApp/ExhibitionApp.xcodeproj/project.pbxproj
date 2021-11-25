@@ -13,6 +13,8 @@
 		9F520F2E274E891F00EB1824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F520F2C274E891F00EB1824 /* LaunchScreen.storyboard */; };
 		9F9AC583274FC150000882C9 /* ExhibitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC582274FC150000882C9 /* ExhibitionViewController.swift */; };
 		9F9AC586274FC210000882C9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC585274FC210000882C9 /* SettingViewController.swift */; };
+		9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */; };
+		9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */; };
 		9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */; };
 		B7E0B99623145F507073DA6F /* Pods_ExhibitionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		9F520F2F274E892000EB1824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9AC582274FC150000882C9 /* ExhibitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionViewController.swift; sourceTree = "<group>"; };
 		9F9AC585274FC210000882C9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCell.swift; sourceTree = "<group>"; };
+		9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCollectionHeaderView.swift; sourceTree = "<group>"; };
 		9FCD0834274F8CCA006A0086 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C0404EAEEC194103C076CBC4 /* Pods_ExhibitionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExhibitionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,7 +79,6 @@
 			children = (
 				9F520F2F274E892000EB1824 /* Info.plist */,
 				9F9AC57A274FC035000882C9 /* Applications */,
-				9F9AC579274FBFEC000882C9 /* Network */,
 				9F9AC57B274FC052000882C9 /* Resource */,
 				9F9AC57C274FC05D000882C9 /* Sources */,
 			);
@@ -111,6 +114,7 @@
 		9F9AC57C274FC05D000882C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9F9AC579274FBFEC000882C9 /* Network */,
 				9F9AC580274FC0A9000882C9 /* Models */,
 				9F9AC57D274FC069000882C9 /* Scene */,
 			);
@@ -144,7 +148,8 @@
 		9F9AC581274FC0F8000882C9 /* Exhibition */ = {
 			isa = PBXGroup;
 			children = (
-				9F9AC582274FC150000882C9 /* ExhibitionViewController.swift */,
+				9F9AC587274FD42F000882C9 /* Controllers */,
+				9F9AC588274FD436000882C9 /* Cells */,
 			);
 			path = Exhibition;
 			sourceTree = "<group>";
@@ -155,6 +160,23 @@
 				9F9AC585274FC210000882C9 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		9F9AC587274FD42F000882C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F9AC582274FC150000882C9 /* ExhibitionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F9AC588274FD436000882C9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F9AC589274FD44C000882C9 /* ExhibitionCell.swift */,
+				9F9AC58B274FED35000882C9 /* ExhibitionCollectionHeaderView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EA95B93E7CA0B0A5D060A0BB /* Pods */ = {
@@ -282,6 +304,8 @@
 			files = (
 				9F9AC586274FC210000882C9 /* SettingViewController.swift in Sources */,
 				9F520F22274E891E00EB1824 /* AppDelegate.swift in Sources */,
+				9F9AC58A274FD44C000882C9 /* ExhibitionCell.swift in Sources */,
+				9F9AC58C274FED35000882C9 /* ExhibitionCollectionHeaderView.swift in Sources */,
 				9F520F24274E891E00EB1824 /* SceneDelegate.swift in Sources */,
 				9FCD0835274F8CCA006A0086 /* TabBarViewController.swift in Sources */,
 				9F9AC583274FC150000882C9 /* ExhibitionViewController.swift in Sources */,
