@@ -10,8 +10,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //MARK: - TabBarTintColor 변경
@@ -19,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appearanceTB = UITabBarAppearance()
             let tabBar = UITabBar()
             appearanceTB.configureWithOpaqueBackground()
-            appearanceTB.backgroundColor = .white
+            appearanceTB.backgroundColor = .systemBackground
             tabBar.standardAppearance = appearanceTB;
             UITabBar.appearance().scrollEdgeAppearance = appearanceTB
             
             let appearanceNV = UINavigationBarAppearance()
             let NavigationBar = UINavigationBar()
             appearanceNV.configureWithOpaqueBackground()
-            appearanceNV.backgroundColor = .white
+            appearanceNV.backgroundColor = .systemBackground
             NavigationBar.standardAppearance = appearanceNV;
             UINavigationBar.appearance().scrollEdgeAppearance = appearanceNV
         }

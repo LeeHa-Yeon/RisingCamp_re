@@ -14,7 +14,7 @@ final class SettingViewController: UIViewController {
     private lazy var darkModeLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .semibold)
         $0.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-        $0.text = "DarkMode"
+        $0.text = "ModeSetting"
     }
     
     lazy var darkModeSwitch = UISwitch().then {
@@ -28,7 +28,6 @@ final class SettingViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setNavigation()
-        darkMode()
     }
     
     //MARK: - Objc Functions
@@ -64,16 +63,18 @@ final class SettingViewController: UIViewController {
     
     func darkMode(){
         let isDarkMode: Bool = UserDefaults.standard.bool(forKey: "darkState")
+        let sceneDelegate = UIApplication.shared.connectedScenes
+                .first!.delegate as! SceneDelegate
         if isDarkMode {
             if #available(iOS 13.0, *) {
-                print("블랙")
-                overrideUserInterfaceStyle = .dark
+                darkModeLabel.text = "DarkMode"
+                sceneDelegate.window?.overrideUserInterfaceStyle = .dark
             }
                     
         }else {
             if #available(iOS 13.0, *) {
-                print("화이트")
-                overrideUserInterfaceStyle = .light
+                darkModeLabel.text = "LightMode"
+                sceneDelegate.window?.overrideUserInterfaceStyle = .light
             }
         }
     }
