@@ -13,6 +13,7 @@
 		9FF06B9527527C0000890577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9427527C0000890577 /* ViewController.swift */; };
 		9FF06B9A27527C0100890577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF06B9927527C0100890577 /* Assets.xcassets */; };
 		9FF06B9D27527C0100890577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF06B9B27527C0100890577 /* LaunchScreen.storyboard */; };
+		9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06BA72753C95D00890577 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9FF06B9927527C0100890577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF06B9C27527C0100890577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FF06B9E27527C0100890577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF06BA72753C95D00890577 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreadGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF06B9427527C0000890577 /* ViewController.swift */,
+				9FF06BA72753C95D00890577 /* GameViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -101,7 +104,6 @@
 				959F3F11F9B1E65F2480EB3E /* Pods-ThreadGame.debug.xcconfig */,
 				437AFCC4796A33BBCB94590A /* Pods-ThreadGame.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */,
 				9FF06B9527527C0000890577 /* ViewController.swift in Sources */,
 				9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */,
 				9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */,
