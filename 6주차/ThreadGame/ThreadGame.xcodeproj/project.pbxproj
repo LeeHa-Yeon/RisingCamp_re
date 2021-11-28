@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26442359DE9140B50D00F816 /* Pods_ThreadGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */; };
 		9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9027527C0000890577 /* AppDelegate.swift */; };
 		9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9227527C0000890577 /* SceneDelegate.swift */; };
 		9FF06B9527527C0000890577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9427527C0000890577 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		437AFCC4796A33BBCB94590A /* Pods-ThreadGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadGame.release.xcconfig"; path = "Target Support Files/Pods-ThreadGame/Pods-ThreadGame.release.xcconfig"; sourceTree = "<group>"; };
+		959F3F11F9B1E65F2480EB3E /* Pods-ThreadGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadGame.debug.xcconfig"; path = "Target Support Files/Pods-ThreadGame/Pods-ThreadGame.debug.xcconfig"; sourceTree = "<group>"; };
 		9FF06B8D27527C0000890577 /* ThreadGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF06B9027527C0000890577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF06B9227527C0000890577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		9FF06B9927527C0100890577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF06B9C27527C0100890577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FF06B9E27527C0100890577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreadGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26442359DE9140B50D00F816 /* Pods_ThreadGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98C4662E0674490D2DCED9AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FF06B8427527C0000890577 = {
 			isa = PBXGroup;
 			children = (
 				9FF06B8F27527C0000890577 /* ThreadGame */,
 				9FF06B8E27527C0000890577 /* Products */,
+				D4120B70A98A9FB7E8AE0DBD /* Pods */,
+				98C4662E0674490D2DCED9AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				9FF06BA427527C6400890577 /* Applications */,
-				9FF06BA527527C7000890577 /* Resource */,
 				9FF06BA627527C8400890577 /* Sources */,
 				9FF06B9927527C0100890577 /* Assets.xcassets */,
 				9FF06B9B27527C0100890577 /* LaunchScreen.storyboard */,
@@ -73,19 +87,22 @@
 			path = Applications;
 			sourceTree = "<group>";
 		};
-		9FF06BA527527C7000890577 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		9FF06BA627527C8400890577 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				9FF06B9427527C0000890577 /* ViewController.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		D4120B70A98A9FB7E8AE0DBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				959F3F11F9B1E65F2480EB3E /* Pods-ThreadGame.debug.xcconfig */,
+				437AFCC4796A33BBCB94590A /* Pods-ThreadGame.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FF06BA127527C0100890577 /* Build configuration list for PBXNativeTarget "ThreadGame" */;
 			buildPhases = (
+				D42A4B9C9F434CA499897DCD /* [CP] Check Pods Manifest.lock */,
 				9FF06B8927527C0000890577 /* Sources */,
 				9FF06B8A27527C0000890577 /* Frameworks */,
 				9FF06B8B27527C0000890577 /* Resources */,
+				367671429E29C0FD2E3A5E5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +171,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		367671429E29C0FD2E3A5E5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThreadGame/Pods-ThreadGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThreadGame/Pods-ThreadGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThreadGame/Pods-ThreadGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D42A4B9C9F434CA499897DCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThreadGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FF06B8927527C0000890577 /* Sources */ = {
@@ -296,6 +357,7 @@
 		};
 		9FF06BA227527C0100890577 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959F3F11F9B1E65F2480EB3E /* Pods-ThreadGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +385,7 @@
 		};
 		9FF06BA327527C0100890577 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 437AFCC4796A33BBCB94590A /* Pods-ThreadGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
