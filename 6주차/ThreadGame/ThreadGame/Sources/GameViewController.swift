@@ -26,6 +26,7 @@ final class GameViewController: UIViewController {
     private lazy var settingBtn = UIButton().then {
         $0.setImage(UIImage(systemName: "gearshape.2"), for: .normal)
         $0.tintColor = .black
+        $0.addTarget(self, action: #selector(settingBtnPressed(_:)), for: .touchUpInside)
     }
     
     // 내용
@@ -33,12 +34,16 @@ final class GameViewController: UIViewController {
         $0.backgroundColor = #colorLiteral(red: 0.7058739662, green: 0.4313936234, blue: 0.03146447241, alpha: 1)
     }
     
-    //TODO: - 이부분을 label로할지, slider로 할지 고민중
+    //TODO: - 시간 :
+    //TODO: - 나중에 slider로 바꿀지 고민해보자.
     private lazy var timeLabel = UILabel().then {
         $0.text = "시간"
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .black
     }
+    var timer : Timer?
+    var startTimerNum: Int = 0
+    
     
     private lazy var scoreLabel = UILabel().then {
         $0.text = "점수"
@@ -235,9 +240,14 @@ final class GameViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
+        startTimer()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     
     //MARK: - Functions
     
@@ -373,9 +383,62 @@ final class GameViewController: UIViewController {
             $0.width.height.equalTo(50.0)
         }
         
+    } // setUI end
+    
+    func startTimer() {
+        //기존에 타이머 동작중이면 중지 처리
+        if timer != nil && timer!.isValid {
+            timer!.invalidate()
+        }
         
-        
-        
+        //타이머 사용값 초기화
+        startTimerNum = 10
+        //1초 간격 타이머 시작
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
     }
     
+    func alertGameOver(){
+        //타이머 종료 후 알림창 띄우기
+        let alert = UIAlertController(title: "게임오버", message: "게임을 다시 시작하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            //TODO: - 게임초기화시켜주는 부분 -> 함수 만들어서 넣어주기
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false, completion: nil)
+    }
+    
+    func alertSetting(){
+        //타이머 종료 후 알림창 띄우기
+        let alert = UIAlertController(title: "게임중단", message: "게임을 계속 플레이 하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        let resetAction = UIAlertAction(title: "다시시작", style: .default) { (action) in
+            //TODO: - 게임초기화시켜주는 부분 -> 함수 만들어서 넣어주기
+        }
+        let continueAction = UIAlertAction(title: "계속하기", style: .default) { (action) in
+            //TODO: - 게임 이어서하게 만드는 부분 -> 함수 만들어서 넣어주기
+        }
+        alert.addAction(resetAction)
+        alert.addAction(continueAction)
+        present(alert, animated: false, completion: nil)
+    }
+    
+    
+    //MARK: - objc Functions
+    
+    // 타이머 동작
+    @objc func timerCallback() {
+        // 함수가 호출될때마다 변한 값 출력
+        self.timeLabel.text = "\(startTimerNum)초"
+        
+        // 시간초과시 중단
+        if(startTimerNum == 0) {
+            timer?.invalidate()
+            timer = nil
+            alertGameOver()
+        }
+        startTimerNum-=1
+    }
+    
+    @objc func settingBtnPressed(_ sender: UIButton) {
+        alertSetting()
+    }
 }
