@@ -51,14 +51,14 @@ final class GameViewController: UIViewController {
     var isRunning = false // 게임 실행중인지
     
     private lazy var scoreLabel = UILabel().then {
-        $0.text = "0점"
+        $0.text = "\(scoreNum)점"
         $0.font = .systemFont(ofSize: 20.0, weight: .semibold)
         $0.textColor = .black
     }
     var scoreNum: Int = 0
     
     private lazy var doneLabel = UILabel().then {
-        $0.text = "완성된 아이들"
+        $0.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .black
     }
@@ -290,11 +290,11 @@ final class GameViewController: UIViewController {
     //MARK: - Functions
     
     func randomTarget(){
-        let randomIdx = Int.random(in: 0...vegetables.count)
+        let randomIdx = Int.random(in: 0..<vegetables.count)
         harvestTarget = vegetables[randomIdx]
         targetImgView.image = UIImage(named: harvestTarget)
         
-        targetCnt = Int.random(in: 3...6)
+        targetCnt = Int.random(in: 1...4)
         targetLabel.text = "\(harvestTarget) 수확 갯수 : \(targetCnt)"
         
     }
@@ -489,9 +489,17 @@ final class GameViewController: UIViewController {
         } else if status == "채소" && selectItem == "수확" {
             btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
             statusArr[part] = "초기"
-            // 완료된 채소들의 갯수를 업데이트시켜줌
-            // 만약 완료된 채소들이 갯수가 수확해야할 채소의 갯수와 동일하면 새로 고침시켜준다.
-            // 수확한 채소가 도달했을 함수를 만들어야됨 -> 점수가 오른다.
+            doneCnt+=1
+            if targetCnt > doneCnt {
+                doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
+            }else {
+                doneCnt = 0
+                scoreNum+=(targetCnt*10)
+                showToast(message: "점수가 \(targetCnt*10)점 올랐습니다.")
+                scoreLabel.text = "\(scoreNum)점"
+                randomTarget()
+                doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
+            }
         } else if status == "두더지" && selectItem == "해충제" {
             btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
             statusArr[part] = "초기"
