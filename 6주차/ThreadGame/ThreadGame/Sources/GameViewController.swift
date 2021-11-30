@@ -50,6 +50,10 @@ final class GameViewController: UIViewController {
     var startTimerNum: Int = Constatns.GAME_TIME  // 게임 시작 시간
     var isRunning = false // 게임 실행중인지
     
+    var partTimer: [Timer] = [Timer(),Timer(),Timer(),Timer(),Timer(),Timer(),Timer(),Timer(),Timer()]
+    var partTimerNum:[Int] = [Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME]
+    var isTimming:[Bool] = [false,false,false,false,false,false,false,false,false]
+    
     private lazy var scoreLabel = UILabel().then {
         $0.text = "\(scoreNum)점"
         $0.font = .systemFont(ofSize: 20.0, weight: .semibold)
@@ -476,38 +480,65 @@ final class GameViewController: UIViewController {
     }
     
     func changeImg(status: String, part: Int){
-        print("확인중--->\(status), 인덱스--->\(part)")
-        if status == "초기" && selectItem == "삽" {
-            btnStatus[part].setImage(UIImage(named: "텃밭"), for: .normal)
-            statusArr[part] = "텃밭"
-        } else if status == "텃밭" && selectItem == "씨앗" {
-            btnStatus[part].setImage(UIImage(named: "새싹"), for: .normal)
-            statusArr[part] = "새싹"
-        } else if status == "새싹" && selectItem == "물뿌리개" {
-            btnStatus[part].setImage(UIImage(named: harvestTarget), for: .normal)
-            statusArr[part] = "채소"
-        } else if status == "채소" && selectItem == "수확" {
-            btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
-            statusArr[part] = "초기"
-            doneCnt+=1
-            if targetCnt > doneCnt {
-                doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
-            }else {
-                doneCnt = 0
-                scoreNum+=(targetCnt*10)
-                showToast(message: "점수가 \(targetCnt*10)점 올랐습니다.")
+        if (!isTimming[part]){
+            // 처음 시작할 경우와 끝이 난 경우
+            if status == "초기" && selectItem == "삽" {
+                btnStatus[part].setImage(UIImage(named: "텃밭"), for: .normal)
+                statusArr[part] = "텃밭"
+                
+                DispatchQueue.global().async { [self] in
+                    isTimming[part] = true
+                    
+                    let runLoop = RunLoop.current
+                    
+                    partTimer[part] = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(partTimerCallback(_:)), userInfo: part, repeats: true)
+                    
+                    while isRunning {
+                        runLoop.run(until: Date().addingTimeInterval(0.1))
+                    }
+                    
+                }
+                
+            } else if status == "두더지" && selectItem == "해충제" {
+                btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
+                statusArr[part] = "초기"
+                scoreNum -= 30
+                showToast(message: "점수가 \(30)점 깎였습니다.")
                 scoreLabel.text = "\(scoreNum)점"
-                randomTarget()
-                doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
+                if scoreNum < 0 {
+                    //TODO: - 게임 종료
+                }
             }
-        } else if status == "두더지" && selectItem == "해충제" {
-            btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
-            statusArr[part] = "초기"
-            // 두더지는 언제 나타나냐 -> 시간이 지나면 두더지가 나타난다.
-            // 두더지 출몰 후 5초가 지나면 점수가 깎인다.
-        } else {
-            showToast(message: "아이템 순서가 틀렸습니다.")
+        }else {
+            if status == "텃밭" && selectItem == "씨앗" {
+                btnStatus[part].setImage(UIImage(named: "새싹"), for: .normal)
+                statusArr[part] = "새싹"
+            } else if status == "새싹" && selectItem == "물뿌리개" {
+                btnStatus[part].setImage(UIImage(named: harvestTarget), for: .normal)
+                statusArr[part] = "채소"
+            } else if status == "채소" && selectItem == "수확" {
+                partTimer[part].invalidate()
+                partTimerNum[part] = Constatns.PART_TIME
+                isTimming[part] = false
+                
+                btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
+                statusArr[part] = "초기"
+                doneCnt+=1
+                if targetCnt > doneCnt {
+                    doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
+                }else {
+                    doneCnt = 0
+                    scoreNum+=(targetCnt*10)
+                    showToast(message: "점수가 \(targetCnt*10)점 올랐습니다.")
+                    scoreLabel.text = "\(scoreNum)점"
+                    randomTarget()
+                    doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
+                }
+            }  else {
+                showToast(message: "아이템 순서가 틀렸습니다.")
+            }
         }
+        
     }
     
     //토스트 메시지
@@ -533,20 +564,34 @@ final class GameViewController: UIViewController {
         startTimerNum-=1
         DispatchQueue.main.async() {
             if self.startTimerNum <= Constatns.GAME_TIME && self.startTimerNum >= 0 {
-                print("남은 시간 \(self.startTimerNum)초")
                 self.timeLabel.text = "\(self.startTimerNum)초"
                 if self.startTimerNum <= 5 {
                     self.timeLabel.textColor = .red
                 }
             }else if self.startTimerNum == -1 {
-                print("게임 종료됨")
                 self.mainTimer.invalidate()
                 self.isRunning = false
                 self.alertGameOver()
             }
         }
+    }
+    
+    @objc func partTimerCallback(_ timer: Timer) {
+        let idx: Int = timer.userInfo as! Int
         
-        
+        partTimerNum[idx]-=1
+        DispatchQueue.main.async() {
+            if self.partTimerNum[idx] >= 0 && self.partTimerNum[idx] <= Constatns.PART_TIME {
+                print("\(idx)번째 \(self.partTimerNum[idx])")
+            }else {
+                self.statusArr[idx] = "두더지"
+                self.btnStatus[idx].setImage(UIImage(named: "두더지"), for: .normal)
+                self.partTimer[idx].invalidate()
+                self.isTimming[idx] = false
+                self.partTimerNum[idx] = Constatns.PART_TIME
+                
+            }
+        }
     }
     
     @objc func settingBtnPressed(_ sender: UIButton) {
