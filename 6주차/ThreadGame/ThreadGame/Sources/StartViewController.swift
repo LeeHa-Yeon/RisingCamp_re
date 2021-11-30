@@ -64,13 +64,15 @@ class StartViewController: UIViewController {
     //MARK: - objc Functions
     
     @objc func moveToGameVC(){
-        let startVC = StartViewController()
-        startVC.modalPresentationStyle = .fullScreen
-        self.present(startVC,animated: true,completion: nil)
+        let gameVC = GameViewController()
+        gameVC.modalPresentationStyle = .fullScreen
+        self.present(gameVC,animated: true,completion: nil)
     }
     
     @objc func moveToHowVC(){
-        // 게임방법으로 가기
+        let howToPlayVC = HowToPlayViewController()
+        howToPlayVC.modalPresentationStyle = .fullScreen
+        self.present(howToPlayVC,animated: true,completion: nil)
     }
     
 }

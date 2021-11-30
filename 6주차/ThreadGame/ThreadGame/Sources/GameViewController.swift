@@ -482,6 +482,7 @@ final class GameViewController: UIViewController {
         }
         let cancleAction = UIAlertAction(title: "NO", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
+            self.dismiss(animated: true, completion: nil)
         }
         alert.addAction(okAction)
         alert.addAction(cancleAction)
