@@ -66,7 +66,7 @@ final class GameViewController: UIViewController {
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .black
     }
-    var doneTarget = ["양파":0,"당근":0,"무":0,"배추":0,"호박":0,"대파":0]
+    var doneTarget = ["양파":0,"당근":0,"무":0,"배추":0,"호박":0,"대파":0] // 사용x
     var doneCnt: Int = 0  // 수확한 갯수
     
     // stackView distribution(x축정렬), alignment(y축정렬)
@@ -303,7 +303,6 @@ final class GameViewController: UIViewController {
         
     }
     
-    
     func setUI(){
         self.view.addSubview(headerView)
         headerView.addSubview(logoImg)
@@ -455,28 +454,98 @@ final class GameViewController: UIViewController {
         
     }
     
+    func initGame(){
+        pauseTimer()
+        partTimerNum = [Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME]
+        isTimming = [false,false,false,false,false,false,false,false,false]
+        statusArr = ["초기","초기","초기","초기","초기","초기","초기","초기","초기"]
+        timeLabel.text = "\(Constatns.GAME_TIME)초"
+        scoreNum = 0
+        scoreLabel.text = "\(scoreNum)점"
+        randomTarget()
+        doneCnt = 0
+        doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
+        for i in 0..<9 {
+            btnStatus[i].setImage(UIImage(named: "초기"), for: .normal)
+        }
+        
+    }
+    
     func alertGameOver(){
         //타이머 종료 후 알림창 띄우기
+        
         let alert = UIAlertController(title: "게임오버", message: "게임을 다시 시작하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+        let okAction = UIAlertAction(title: "YES", style: .default) { (action) in
             //TODO: - 게임초기화시켜주는 부분 -> 함수 만들어서 넣어주기
+            self.initGame()
+            self.startGameTimer()
+        }
+        let cancleAction = UIAlertAction(title: "NO", style: .cancel) { (action) in
+            //TODO: - 게임 처음 화면으로 돌아가기
         }
         alert.addAction(okAction)
+        alert.addAction(cancleAction)
         present(alert, animated: false, completion: nil)
     }
     
     func alertSetting(){
         //타이머 종료 후 알림창 띄우기
+        pauseTimer()
         let alert = UIAlertController(title: "게임중단", message: "게임을 계속 플레이 하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         let resetAction = UIAlertAction(title: "다시시작", style: .default) { (action) in
             //TODO: - 게임초기화시켜주는 부분 -> 함수 만들어서 넣어주기
+            self.initGame()
+            self.startGameTimer()
         }
         let continueAction = UIAlertAction(title: "계속하기", style: .default) { (action) in
             //TODO: - 게임 이어서하게 만드는 부분 -> 함수 만들어서 넣어주기
+            self.rePlayTimer()
         }
         alert.addAction(resetAction)
         alert.addAction(continueAction)
         present(alert, animated: false, completion: nil)
+    }
+    
+    func pauseTimer(){
+        mainTimer.invalidate()
+        isRunning = false
+        
+        for i in 0..<9 {
+            if isTimming[i] {
+                partTimer[i].invalidate()
+            }
+        }
+    }
+    
+    func rePlayTimer(){
+        DispatchQueue.global().async { [self] in
+            isRunning = true
+            let runLoop = RunLoop.current
+            
+            //1초 간격 타이머 시작
+            mainTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+            
+            while isRunning {
+                runLoop.run(until: Date().addingTimeInterval(0.1))
+            }
+        }
+        
+        for i in 0..<9 {
+            if isTimming[i] {
+                DispatchQueue.global().async { [self] in
+                    isTimming[i] = true
+                    
+                    let runLoop = RunLoop.current
+                    
+                    partTimer[i] = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(partTimerCallback(_:)), userInfo: i, repeats: true)
+                    
+                    while isRunning {
+                        runLoop.run(until: Date().addingTimeInterval(0.1))
+                    }
+                    
+                }
+            }
+        }
     }
     
     func changeImg(status: String, part: Int){
@@ -506,7 +575,7 @@ final class GameViewController: UIViewController {
                 showToast(message: "점수가 \(30)점 깎였습니다.")
                 scoreLabel.text = "\(scoreNum)점"
                 if scoreNum < 0 {
-                    //TODO: - 게임 종료
+                    alertGameOver()
                 }
             }
         }else {

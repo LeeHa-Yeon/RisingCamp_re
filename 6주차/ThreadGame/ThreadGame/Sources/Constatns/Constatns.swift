@@ -6,6 +6,6 @@
 //
 
 struct Constatns {
-    static let GAME_TIME:Int = 60
+    static let GAME_TIME:Int = 300
     static let PART_TIME:Int = 5
 }
