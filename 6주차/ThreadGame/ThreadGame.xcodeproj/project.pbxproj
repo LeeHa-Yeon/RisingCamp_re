@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26442359DE9140B50D00F816 /* Pods_ThreadGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */; };
+		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
 		9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9027527C0000890577 /* AppDelegate.swift */; };
 		9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9227527C0000890577 /* SceneDelegate.swift */; };
 		9FF06B9527527C0000890577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9427527C0000890577 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		437AFCC4796A33BBCB94590A /* Pods-ThreadGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadGame.release.xcconfig"; path = "Target Support Files/Pods-ThreadGame/Pods-ThreadGame.release.xcconfig"; sourceTree = "<group>"; };
 		959F3F11F9B1E65F2480EB3E /* Pods-ThreadGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadGame.debug.xcconfig"; path = "Target Support Files/Pods-ThreadGame/Pods-ThreadGame.debug.xcconfig"; sourceTree = "<group>"; };
+		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
 		9FF06B8D27527C0000890577 /* ThreadGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF06B9027527C0000890577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF06B9227527C0000890577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 				F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F9FE1202756409E000535C3 /* Constatns */ = {
+			isa = PBXGroup;
+			children = (
+				9F9FE121275640AC000535C3 /* Constatns.swift */,
+			);
+			path = Constatns;
 			sourceTree = "<group>";
 		};
 		9FF06B8427527C0000890577 = {
@@ -92,6 +102,7 @@
 		9FF06BA627527C8400890577 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9F9FE1202756409E000535C3 /* Constatns */,
 				9FF06B9427527C0000890577 /* ViewController.swift */,
 				9FF06BA72753C95D00890577 /* GameViewController.swift */,
 			);
@@ -224,6 +235,7 @@
 				9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */,
 				9FF06B9527527C0000890577 /* ViewController.swift in Sources */,
 				9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */,
+				9F9FE122275640AC000535C3 /* Constatns.swift in Sources */,
 				9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

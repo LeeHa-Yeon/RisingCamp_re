@@ -12,9 +12,10 @@ import SnapKit
 // final을 붙이는 이유 : 상속이 불가능하도록
 final class GameViewController: UIViewController {
     
-    var orderArr = ["시작","삽","씨앗","물뿌리개","수확","완료"]
+    var orderItemArr = ["시작","삽","씨앗","물뿌리개","수확"]
     var vegetables = ["양파","당근","무","배추","호박","대파"]
-    var statusArr = ["시작","씨앗"]
+    var statusArr = ["초기","초기","초기","초기","초기","초기","초기","초기","초기"]
+    var btnStatus = [UIButton]()
     
     //MARK: - UIComponents
     // 상단
@@ -46,7 +47,7 @@ final class GameViewController: UIViewController {
         $0.textColor = .black
     }
     var mainTimer : Timer = Timer()  // 게임 시간
-    var startTimerNum: Int = 10  // 게임 시작 시간
+    var startTimerNum: Int = Constatns.GAME_TIME  // 게임 시작 시간
     var isRunning = false // 게임 실행중인지
     
     private lazy var scoreLabel = UILabel().then {
@@ -108,6 +109,7 @@ final class GameViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
         $0.tag = 1
         $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var secondPartBtn = UIButton().then{
@@ -116,12 +118,16 @@ final class GameViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
         $0.tag = 2
         $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var thirdPartBtn = UIButton().then{
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 3
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var middleStackView = UIStackView().then{
@@ -137,18 +143,27 @@ final class GameViewController: UIViewController {
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 4
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var fifthPartBtn = UIButton().then{
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 5
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var sixthPartBtn = UIButton().then{
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 6
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     
@@ -165,18 +180,27 @@ final class GameViewController: UIViewController {
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 7
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var eighthPartBtn = UIButton().then{
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 8
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var ninthPartBtn = UIButton().then{
         $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 9
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
+        btnStatus.append($0)
     }
     
     lazy var targetImgView = UIImageView().then{
@@ -262,7 +286,7 @@ final class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
+    
     //MARK: - Functions
     
     func randomTarget(){
@@ -411,12 +435,12 @@ final class GameViewController: UIViewController {
     } // setUI end
     
     func startGameTimer() {
-        DispatchQueue.main.async { [self] in
+        DispatchQueue.global().async { [self] in
             isRunning = true
             let runLoop = RunLoop.current
             
             //타이머 사용값 초기화
-            startTimerNum = 10
+            startTimerNum = Constatns.GAME_TIME
             //1초 간격 타이머 시작
             mainTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
             
@@ -453,21 +477,45 @@ final class GameViewController: UIViewController {
     
     func changeImg(status: String, part: Int){
         print("확인중--->\(status), 인덱스--->\(part)")
-        if status == "시작" && selectItem == "삽" {
-            print("시작")
-        } else if status == "삽" && selectItem == "씨앗" {
-            print("삽")
-        } else if status == "씨앗" && selectItem == "물뿌리개" {
-            print("씨앗")
-        } else if status == "물뿌리개" && selectItem == "수확" {
-            print("물뿌리개")
-        } else if status == "수확" {
-            print("수확")
-        } else if status == "완료" {
-            print("초기화하기")
+        if status == "초기" && selectItem == "삽" {
+            btnStatus[part].setImage(UIImage(named: "텃밭"), for: .normal)
+            statusArr[part] = "텃밭"
+        } else if status == "텃밭" && selectItem == "씨앗" {
+            btnStatus[part].setImage(UIImage(named: "새싹"), for: .normal)
+            statusArr[part] = "새싹"
+        } else if status == "새싹" && selectItem == "물뿌리개" {
+            btnStatus[part].setImage(UIImage(named: harvestTarget), for: .normal)
+            statusArr[part] = "채소"
+        } else if status == "채소" && selectItem == "수확" {
+            btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
+            statusArr[part] = "초기"
+            // 완료된 채소들의 갯수를 업데이트시켜줌
+            // 만약 완료된 채소들이 갯수가 수확해야할 채소의 갯수와 동일하면 새로 고침시켜준다.
+            // 수확한 채소가 도달했을 함수를 만들어야됨 -> 점수가 오른다.
+        } else if status == "두더지" && selectItem == "해충제" {
+            btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
+            statusArr[part] = "초기"
+            // 두더지는 언제 나타나냐 -> 시간이 지나면 두더지가 나타난다.
+            // 두더지 출몰 후 5초가 지나면 점수가 깎인다.
         } else {
-            print("두더지 잡기")
+            showToast(message: "아이템 순서가 틀렸습니다.")
         }
+    }
+    
+    //토스트 메시지
+    func showToast(message : String, font: UIFont = UIFont.systemFont(ofSize: 14.0)){
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds = true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: { toastLabel.alpha = 0.0 }, completion: {(isCompleted) in toastLabel.removeFromSuperview()})
+        
     }
     
     //MARK: - objc Functions
@@ -475,18 +523,19 @@ final class GameViewController: UIViewController {
     // 메인 타이머 동작
     @objc func timerCallback() {
         startTimerNum-=1
-        
-        if startTimerNum <= 10 && startTimerNum >= 0 {
-            print("남은 시간 \(startTimerNum)초")
-            self.timeLabel.text = "\(startTimerNum)초"
-            if startTimerNum <= 5 {
-                self.timeLabel.textColor = .red
+        DispatchQueue.main.async() {
+            if self.startTimerNum <= Constatns.GAME_TIME && self.startTimerNum >= 0 {
+                print("남은 시간 \(self.startTimerNum)초")
+                self.timeLabel.text = "\(self.startTimerNum)초"
+                if self.startTimerNum <= 5 {
+                    self.timeLabel.textColor = .red
+                }
+            }else if self.startTimerNum == -1 {
+                print("게임 종료됨")
+                self.mainTimer.invalidate()
+                self.isRunning = false
+                self.alertGameOver()
             }
-        }else if startTimerNum == -1 {
-            print("게임 종료됨")
-            mainTimer.invalidate()
-            isRunning = false
-            alertGameOver()
         }
         
         
@@ -498,18 +547,12 @@ final class GameViewController: UIViewController {
     
     @objc func partBtnPressed(_ sender: UIButton) {
         let idx = sender.tag - 1
-        if sender.tag == 1 {
-            print("일번")
-            changeImg(status: statusArr[idx],part: idx)
-        } else if sender.tag == 2 {
-            print("이번")
-            changeImg(status: statusArr[idx],part: idx)
-        }
+        changeImg(status: statusArr[idx],part: idx)
     }
     
     @objc func itemBtnPressed(_ sender: UIButton) {
         if sender.tag >= 10 && sender.tag <= 13 {
-            selectItem = orderArr[sender.tag-9]
+            selectItem = orderItemArr[sender.tag-9]
         }else if sender.tag == 14 {
             selectItem = "해충제"
         }
