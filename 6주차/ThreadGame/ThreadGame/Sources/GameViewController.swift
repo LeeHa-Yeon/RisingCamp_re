@@ -12,6 +12,10 @@ import SnapKit
 // final을 붙이는 이유 : 상속이 불가능하도록
 final class GameViewController: UIViewController {
     
+    var orderArr = ["시작","삽","씨앗","물뿌리개","수확","완료"]
+    var vegetables = ["양파","당근","무","배추","호박","대파"]
+    var statusArr = ["시작","씨앗"]
+    
     //MARK: - UIComponents
     // 상단
     private lazy var headerView = UIView().then {
@@ -34,28 +38,31 @@ final class GameViewController: UIViewController {
         $0.backgroundColor = #colorLiteral(red: 0.7058739662, green: 0.4313936234, blue: 0.03146447241, alpha: 1)
     }
     
-    //TODO: - 시간 :
-    //TODO: - 나중에 slider로 바꿀지 고민해보자.
+    //TODO: - 시간
+    //TODO: - 나중에 UIProgressView로 바꿀지 고민해보자.
     private lazy var timeLabel = UILabel().then {
-        $0.text = "시간"
-        $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        $0.text = "\(startTimerNum)초"
+        $0.font = .systemFont(ofSize: 20.0, weight: .semibold)
         $0.textColor = .black
     }
-    var timer : Timer?
-    var startTimerNum: Int = 0
-    
+    var mainTimer : Timer = Timer()  // 게임 시간
+    var startTimerNum: Int = 10  // 게임 시작 시간
+    var isRunning = false // 게임 실행중인지
     
     private lazy var scoreLabel = UILabel().then {
-        $0.text = "점수"
-        $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        $0.text = "0점"
+        $0.font = .systemFont(ofSize: 20.0, weight: .semibold)
         $0.textColor = .black
     }
+    var scoreNum: Int = 0
     
     private lazy var doneLabel = UILabel().then {
         $0.text = "완성된 아이들"
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .black
     }
+    var doneTarget = ["양파":0,"당근":0,"무":0,"배추":0,"호박":0,"대파":0]
+    var doneCnt: Int = 0  // 수확한 갯수
     
     // stackView distribution(x축정렬), alignment(y축정렬)
     lazy var contentStackView = UIStackView().then{
@@ -96,22 +103,23 @@ final class GameViewController: UIViewController {
     }
     
     lazy var firstPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 1
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
     }
     
     lazy var secondPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.tag = 2
+        $0.addTarget(self, action: #selector(partBtnPressed(_:)), for: .touchUpInside)
     }
     
     lazy var thirdPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
@@ -126,22 +134,19 @@ final class GameViewController: UIViewController {
     }
     
     lazy var fourthPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
     
     lazy var fifthPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
     
     lazy var sixthPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
@@ -157,38 +162,34 @@ final class GameViewController: UIViewController {
     }
     
     lazy var seventhPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
     
     lazy var eighthPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
     
     lazy var ninthPartBtn = UIButton().then{
-        $0.setImage(UIImage(named: "텃밭"), for: .normal)
-        $0.setImage(UIImage(named: "새싹"), for: .selected)
+        $0.setImage(UIImage(named: "초기"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
     
     lazy var targetImgView = UIImageView().then{
-        $0.image = UIImage(named: "양파")
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
     }
+    var harvestTarget = String() // 수확 대상
     
     lazy var targetLabel = UILabel().then {
-        $0.text = "수확해야하는 갯수 : 3개"
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .black
     }
-    
+    var targetCnt = Int() // 수확 개수
     
     // 하단
     private lazy var footerView = UIView().then {
@@ -210,46 +211,70 @@ final class GameViewController: UIViewController {
         $0.setImage(UIImage(named: "삽"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(itemBtnPressed(_:)), for: .touchUpInside)
+        $0.tag = 10
     }
     
     let itemSeed = UIButton().then{
         $0.setImage(UIImage(named: "씨앗"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(itemBtnPressed(_:)), for: .touchUpInside)
+        $0.tag = 11
     }
     
     let itemWater = UIButton().then{
         $0.setImage(UIImage(named: "물뿌리개"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(itemBtnPressed(_:)), for: .touchUpInside)
+        $0.tag = 12
     }
     
     let itemHand = UIButton().then{
         $0.setImage(UIImage(named: "수확"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(itemBtnPressed(_:)), for: .touchUpInside)
+        $0.tag = 13
     }
     
     let itemPesticide = UIButton().then{
         $0.setImage(UIImage(named: "해충제"), for: .normal)
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(itemBtnPressed(_:)), for: .touchUpInside)
+        $0.tag = 14
     }
+    
+    var selectItem = String()
     
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        startTimer()
+        startGameTimer()
+        randomTarget()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
+
     //MARK: - Functions
+    
+    func randomTarget(){
+        let randomIdx = Int.random(in: 0...vegetables.count)
+        harvestTarget = vegetables[randomIdx]
+        targetImgView.image = UIImage(named: harvestTarget)
+        
+        targetCnt = Int.random(in: 3...6)
+        targetLabel.text = "\(harvestTarget) 수확 갯수 : \(targetCnt)"
+        
+    }
+    
     
     func setUI(){
         self.view.addSubview(headerView)
@@ -385,16 +410,21 @@ final class GameViewController: UIViewController {
         
     } // setUI end
     
-    func startTimer() {
-        //기존에 타이머 동작중이면 중지 처리
-        if timer != nil && timer!.isValid {
-            timer!.invalidate()
+    func startGameTimer() {
+        DispatchQueue.main.async { [self] in
+            isRunning = true
+            let runLoop = RunLoop.current
+            
+            //타이머 사용값 초기화
+            startTimerNum = 10
+            //1초 간격 타이머 시작
+            mainTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+            
+            while isRunning {
+                runLoop.run(until: Date().addingTimeInterval(0.1))
+            }
         }
         
-        //타이머 사용값 초기화
-        startTimerNum = 10
-        //1초 간격 타이머 시작
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
     }
     
     func alertGameOver(){
@@ -421,24 +451,67 @@ final class GameViewController: UIViewController {
         present(alert, animated: false, completion: nil)
     }
     
+    func changeImg(status: String, part: Int){
+        print("확인중--->\(status), 인덱스--->\(part)")
+        if status == "시작" && selectItem == "삽" {
+            print("시작")
+        } else if status == "삽" && selectItem == "씨앗" {
+            print("삽")
+        } else if status == "씨앗" && selectItem == "물뿌리개" {
+            print("씨앗")
+        } else if status == "물뿌리개" && selectItem == "수확" {
+            print("물뿌리개")
+        } else if status == "수확" {
+            print("수확")
+        } else if status == "완료" {
+            print("초기화하기")
+        } else {
+            print("두더지 잡기")
+        }
+    }
     
     //MARK: - objc Functions
     
-    // 타이머 동작
+    // 메인 타이머 동작
     @objc func timerCallback() {
-        // 함수가 호출될때마다 변한 값 출력
-        self.timeLabel.text = "\(startTimerNum)초"
+        startTimerNum-=1
         
-        // 시간초과시 중단
-        if(startTimerNum == 0) {
-            timer?.invalidate()
-            timer = nil
+        if startTimerNum <= 10 && startTimerNum >= 0 {
+            print("남은 시간 \(startTimerNum)초")
+            self.timeLabel.text = "\(startTimerNum)초"
+            if startTimerNum <= 5 {
+                self.timeLabel.textColor = .red
+            }
+        }else if startTimerNum == -1 {
+            print("게임 종료됨")
+            mainTimer.invalidate()
+            isRunning = false
             alertGameOver()
         }
-        startTimerNum-=1
+        
+        
     }
     
     @objc func settingBtnPressed(_ sender: UIButton) {
         alertSetting()
+    }
+    
+    @objc func partBtnPressed(_ sender: UIButton) {
+        let idx = sender.tag - 1
+        if sender.tag == 1 {
+            print("일번")
+            changeImg(status: statusArr[idx],part: idx)
+        } else if sender.tag == 2 {
+            print("이번")
+            changeImg(status: statusArr[idx],part: idx)
+        }
+    }
+    
+    @objc func itemBtnPressed(_ sender: UIButton) {
+        if sender.tag >= 10 && sender.tag <= 13 {
+            selectItem = orderArr[sender.tag-9]
+        }else if sender.tag == 14 {
+            selectItem = "해충제"
+        }
     }
 }
