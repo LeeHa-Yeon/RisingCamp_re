@@ -7,5 +7,5 @@
 
 struct Constatns {
     static let GAME_TIME:Int = 300
-    static let PART_TIME:Int = 5
+    static let PART_TIME:Int = 10
 }

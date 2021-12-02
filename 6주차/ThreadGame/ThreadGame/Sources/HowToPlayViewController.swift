@@ -30,22 +30,22 @@ class HowToPlayViewController: UIViewController {
     var howToImges = [UIImageView]()
     
     private lazy var firstImg = UIImageView().then {
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
         $0.image = #imageLiteral(resourceName: "첫번째방법")
         $0.clipsToBounds = true
         howToImges.append($0)
     }
     
     private lazy var secondImg = UIImageView().then {
-        $0.contentMode = .scaleAspectFill
-        $0.image = #imageLiteral(resourceName: "시작화면")
+        $0.contentMode = .scaleAspectFit
+        $0.image = #imageLiteral(resourceName: "두번째방법")
         $0.clipsToBounds = true
         howToImges.append($0)
     }
     
     private lazy var thiredImg = UIImageView().then {
-        $0.contentMode = .scaleAspectFill
-        $0.image = #imageLiteral(resourceName: "첫번째방법")
+        $0.contentMode = .scaleAspectFit
+        $0.image = #imageLiteral(resourceName: "세번째방법")
         $0.clipsToBounds = true
         howToImges.append($0)
     }
