@@ -92,7 +92,8 @@ class StartViewController: UIViewController {
     }
     
     @objc func moveToRankListVC(){
-        let rankListVC = RankViewController()
+        let rankListVC = UINavigationController(rootViewController: RankViewController())
+        
         rankListVC.modalPresentationStyle = .fullScreen
         self.present(rankListVC,animated: true,completion: nil)
     }
