@@ -12,6 +12,8 @@ import SnapKit
 // final을 붙이는 이유 : 상속이 불가능하도록
 final class GameViewController: UIViewController {
     
+    var rankDict = [String:Any]()
+    
     var orderItemArr = ["시작","삽","씨앗","물뿌리개","수확"]
     var vegetables = ["양파","당근","무","배추","호박","대파"]
     var statusArr = ["초기","초기","초기","초기","초기","초기","초기","초기","초기"]
@@ -290,6 +292,11 @@ final class GameViewController: UIViewController {
         setUI()
         startGameTimer()
         randomTarget()
+        if UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) == nil {
+            rankDict = [String:Any]()
+        } else {
+            rankDict = UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) as! [String:Int]
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -326,7 +333,6 @@ final class GameViewController: UIViewController {
         footerView.addSubview(itemStackView)
 
         nicNameLabel.text =  UserDefaults.standard.string(forKey: Constatns.USER_NICNAME)
-
         
         
         // 상단, 내용, 하단뷰의 제약조건을 설정
@@ -487,6 +493,9 @@ final class GameViewController: UIViewController {
     }
     
     func scoreAlert(){
+        rankDict[nicNameLabel.text ?? "이름없음"] = scoreNum
+        UserDefaults.standard.set(rankDict, forKey: Constatns.RANK_INFO)
+        print("확인",rankDict)
         let alert = UIAlertController(title: "나의 점수", message: "👏🏻 축하합니다 \(scoreNum)점을 획득하셨습니다. 👏🏻", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
             self.alertGameOver()
