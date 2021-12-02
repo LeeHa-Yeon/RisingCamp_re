@@ -33,6 +33,14 @@ class StartViewController: UIViewController {
         $0.layer.cornerRadius = 10
     }
     
+    private lazy var rankListBtn = UIButton().then {
+        $0.setTitle("랭킹리스트", for: .normal)
+        $0.addTarget(self, action: #selector(moveToRankListVC), for: .touchUpInside)
+        $0.backgroundColor = #colorLiteral(red: 0.2448913753, green: 0.1455996633, blue: 0.05857490748, alpha: 1)
+        $0.setTitleColor(.white, for: .normal)
+        $0.layer.cornerRadius = 10
+    }
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +52,7 @@ class StartViewController: UIViewController {
         self.view.addSubview(bgImg)
         self.view.addSubview(gameBtn)
         self.view.addSubview(howBtn)
+        self.view.addSubview(rankListBtn)
         
         bgImg.snp.makeConstraints{
             $0.top.bottom.leading.trailing.equalToSuperview()
@@ -57,6 +66,12 @@ class StartViewController: UIViewController {
         howBtn.snp.makeConstraints{
             $0.trailing.leading.equalToSuperview().inset(100)
             $0.top.equalTo(gameBtn.snp.bottom).inset(-50)
+            
+        }
+        
+        rankListBtn.snp.makeConstraints{
+            $0.trailing.leading.equalToSuperview().inset(100)
+            $0.top.equalTo(howBtn.snp.bottom).inset(-50)
             
         }
     }
@@ -74,6 +89,12 @@ class StartViewController: UIViewController {
         let howToPlayVC = HowToPlayViewController()
         howToPlayVC.modalPresentationStyle = .fullScreen
         self.present(howToPlayVC,animated: true,completion: nil)
+    }
+    
+    @objc func moveToRankListVC(){
+        let rankListVC = RankViewController()
+        rankListVC.modalPresentationStyle = .fullScreen
+        self.present(rankListVC,animated: true,completion: nil)
     }
     
 }

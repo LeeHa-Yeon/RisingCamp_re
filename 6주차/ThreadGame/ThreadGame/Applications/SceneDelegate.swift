@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .systemBackground
         
-        let mainViewController = RankViewController()
-        let navigationController = UINavigationController(rootViewController: mainViewController)
-        window?.rootViewController = navigationController
+//        let mainViewController = RankViewController()
+//        let navigationController = UINavigationController(rootViewController: mainViewController)
+//        window?.rootViewController = navigationController
         
-//        window?.rootViewController = RankViewController()
+        window?.rootViewController = StartViewController()
         window?.makeKeyAndVisible()
     }
     

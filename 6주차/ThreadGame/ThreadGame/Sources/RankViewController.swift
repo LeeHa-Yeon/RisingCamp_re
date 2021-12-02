@@ -28,12 +28,21 @@ class RankViewController: UIViewController {
         $0.estimatedRowHeight = 60
     }
     
+    private lazy var backBtn = UIButton().then {
+        $0.setTitle("홈으로가기", for: .normal)
+        $0.layer.cornerRadius = 10
+        $0.backgroundColor = .black
+        $0.setTitleColor(.white, for: .normal)
+        $0.addTarget(self, action: #selector(backBtnTapped), for: .touchUpInside)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUserInfo()
-        setCollecionView()
         setNavigationItem()
+        setTableView()
+        setUI()
         
     }
     
@@ -55,15 +64,32 @@ class RankViewController: UIViewController {
         currentUserNicName = UserDefaults.standard.string(forKey: Constatns.USER_NICNAME) ?? "값이없음"
     }
     
-    func setCollecionView(){
+    func setUI(){
+        view.backgroundColor = .brown
+        view.addSubview(backBtn)
+        
+        backBtn.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.trailing.leading.equalToSuperview().inset(120)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(50)
+        }
+    }
+    
+    func setTableView(){
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(100)
         }
     }
     
     func setNavigationItem(){
         navigationItem.title = "랭킹정보"
+    }
+    
+    @objc func backBtnTapped(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
@@ -151,3 +177,4 @@ class RankCell : UITableViewCell {
     }
     
 }
+
