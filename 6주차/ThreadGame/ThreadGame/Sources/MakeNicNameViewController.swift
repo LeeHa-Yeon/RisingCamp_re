@@ -21,13 +21,9 @@ class MakeNicNameViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        namingAlert()
-        print("반가워")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("안녕")
+        if Constatns.isStart {
+            namingAlert()
+        }
     }
     
     

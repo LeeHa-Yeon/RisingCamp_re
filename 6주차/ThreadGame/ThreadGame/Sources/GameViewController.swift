@@ -505,6 +505,7 @@ final class GameViewController: UIViewController {
         }
         let cancleAction = UIAlertAction(title: "NO", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
+            Constatns.isStart = false
 //            self.view.window?.rootViewController = self
             self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
 //            self.dismiss(animated: true, completion: nil)
@@ -537,6 +538,7 @@ final class GameViewController: UIViewController {
         let endAction = UIAlertAction(title: "게임 종료", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
 //            self.dismiss(animated: true, completion: nil)
+            Constatns.isStart = false
             self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
         }
         alert.addAction(resetAction)

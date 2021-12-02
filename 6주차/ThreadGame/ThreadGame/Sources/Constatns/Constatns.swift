@@ -10,4 +10,5 @@ struct Constatns {
     static let PART_TIME:Int = 10
     
     static let USER_NICNAME:String = "userNicName"
+    static var isStart: Bool = false
 }

@@ -67,6 +67,7 @@ class StartViewController: UIViewController {
         let makeNicNameVC = MakeNicNameViewController()
         makeNicNameVC.modalPresentationStyle = .fullScreen
         self.present(makeNicNameVC,animated: true,completion: nil)
+        Constatns.isStart = true
     }
     
     @objc func moveToHowVC(){
