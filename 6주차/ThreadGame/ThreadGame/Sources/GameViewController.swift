@@ -292,11 +292,7 @@ final class GameViewController: UIViewController {
         setUI()
         startGameTimer()
         randomTarget()
-        if UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) == nil {
-            rankDict = [String:Any]()
-        } else {
-            rankDict = UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) as! [String:Int]
-        }
+        loadUserInfo()
     }
     
     override func didReceiveMemoryWarning() {
@@ -305,6 +301,14 @@ final class GameViewController: UIViewController {
     
     
     //MARK: - Functions
+    
+    func loadUserInfo(){
+        if UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) == nil {
+            rankDict = [String:Any]()
+        } else {
+            rankDict = UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) as! [String:Int]
+        }
+    }
     
     func randomTarget(){
         let randomIdx = Int.random(in: 0..<vegetables.count)
