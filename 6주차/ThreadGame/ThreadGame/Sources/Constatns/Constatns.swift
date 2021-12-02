@@ -8,4 +8,6 @@
 struct Constatns {
     static let GAME_TIME:Int = 20
     static let PART_TIME:Int = 10
+    
+    static let USER_NICNAME:String = "userNicName"
 }

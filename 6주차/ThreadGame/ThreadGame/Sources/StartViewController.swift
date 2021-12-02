@@ -20,7 +20,7 @@ class StartViewController: UIViewController {
     
     private lazy var gameBtn = UIButton().then {
         $0.setTitle("게임시작", for: .normal)
-        $0.addTarget(self, action: #selector(moveToGameVC), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(moveToMakeNicVC), for: .touchUpInside)
         $0.backgroundColor = #colorLiteral(red: 0.9808887839, green: 0.5895134807, blue: 0.1317638457, alpha: 1)
         $0.layer.cornerRadius = 10
     }
@@ -63,10 +63,10 @@ class StartViewController: UIViewController {
     
     //MARK: - objc Functions
     
-    @objc func moveToGameVC(){
-        let gameVC = GameViewController()
-        gameVC.modalPresentationStyle = .fullScreen
-        self.present(gameVC,animated: true,completion: nil)
+    @objc func moveToMakeNicVC(){
+        let makeNicNameVC = MakeNicNameViewController()
+        makeNicNameVC.modalPresentationStyle = .fullScreen
+        self.present(makeNicNameVC,animated: true,completion: nil)
     }
     
     @objc func moveToHowVC(){

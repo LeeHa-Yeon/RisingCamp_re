@@ -16,6 +16,7 @@
 		9FF06B9A27527C0100890577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF06B9927527C0100890577 /* Assets.xcassets */; };
 		9FF06B9D27527C0100890577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF06B9B27527C0100890577 /* LaunchScreen.storyboard */; };
 		9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06BA72753C95D00890577 /* GameViewController.swift */; };
+		9FF5960627588EC500048CA3 /* MakeNicNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5960527588EC500048CA3 /* MakeNicNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9FF06B9C27527C0100890577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FF06B9E27527C0100890577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF06BA72753C95D00890577 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9FF5960527588EC500048CA3 /* MakeNicNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicNameViewController.swift; sourceTree = "<group>"; };
 		F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreadGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				9F442A372756C5AE00F7B8D1 /* StartViewController.swift */,
 				9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */,
 				9FF06BA72753C95D00890577 /* GameViewController.swift */,
+				9FF5960527588EC500048CA3 /* MakeNicNameViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */,
 				9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */,
+				9FF5960627588EC500048CA3 /* MakeNicNameViewController.swift in Sources */,
 				9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */,
 				9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */,
 				9F9FE122275640AC000535C3 /* Constatns.swift in Sources */,

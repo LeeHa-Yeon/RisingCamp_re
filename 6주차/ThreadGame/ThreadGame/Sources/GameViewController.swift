@@ -39,6 +39,12 @@ final class GameViewController: UIViewController {
         $0.backgroundColor = #colorLiteral(red: 0.7058739662, green: 0.4313936234, blue: 0.03146447241, alpha: 1)
     }
     
+    private lazy var nicNameLabel = UILabel().then {
+        $0.text = "이름없음"
+        $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        $0.textColor = .black
+    }
+    
     //TODO: - 시간
     //TODO: - 나중에 UIProgressView로 바꿀지 고민해보자.
     private lazy var timeLabel = UILabel().then {
@@ -309,6 +315,7 @@ final class GameViewController: UIViewController {
         headerView.addSubview(settingBtn)
         
         self.view.addSubview(contentView)
+        contentView.addSubview(nicNameLabel)
         contentView.addSubview(contentStackView)
         contentView.addSubview(gardenImgView)
         contentView.addSubview(entireStackView)
@@ -317,6 +324,9 @@ final class GameViewController: UIViewController {
         
         self.view.addSubview(footerView)
         footerView.addSubview(itemStackView)
+
+        nicNameLabel.text =  UserDefaults.standard.string(forKey: Constatns.USER_NICNAME)
+
         
         
         // 상단, 내용, 하단뷰의 제약조건을 설정
@@ -345,9 +355,14 @@ final class GameViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
         }
         
+        nicNameLabel.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(30.0)
+            $0.centerX.equalToSuperview()
+        }
+        
         // contentView안에 존재하는 Component 설정
         contentStackView.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(40.0)
+            $0.top.equalToSuperview().offset(50.0)
             $0.centerX.equalToSuperview()
         }
         
@@ -490,7 +505,16 @@ final class GameViewController: UIViewController {
         }
         let cancleAction = UIAlertAction(title: "NO", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
-            self.dismiss(animated: true, completion: nil)
+//            self.view.window?.rootViewController = self
+            self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+//            self.dismiss(animated: true, completion: nil)
+//            self.view.window?.rootViewController?.dismiss(animated: false, completion: {
+//              let startVC = StartViewController()
+//                startVC.modalPresentationStyle = .fullScreen
+//                let sceneDelegate = UIApplication.shared.connectedScenes
+//                                .first!.delegate as! SceneDelegate
+//                sceneDelegate.window?.rootViewController?.present(startVC, animated: true, completion: nil)
+//            })
         }
         alert.addAction(okAction)
         alert.addAction(cancleAction)
@@ -512,7 +536,8 @@ final class GameViewController: UIViewController {
         }
         let endAction = UIAlertAction(title: "게임 종료", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
-            self.dismiss(animated: true, completion: nil)
+//            self.dismiss(animated: true, completion: nil)
+            self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
         }
         alert.addAction(resetAction)
         alert.addAction(continueAction)
