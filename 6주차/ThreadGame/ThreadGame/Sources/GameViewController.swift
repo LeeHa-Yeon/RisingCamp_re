@@ -471,9 +471,17 @@ final class GameViewController: UIViewController {
         
     }
     
+    func scoreAlert(){
+        let alert = UIAlertController(title: "나의 점수", message: "👏🏻 축하합니다 \(scoreNum)점을 획득하셨습니다. 👏🏻", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+            self.alertGameOver()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false, completion: nil)
+    }
+    
     func alertGameOver(){
         //타이머 종료 후 알림창 띄우기
-        
         let alert = UIAlertController(title: "게임오버", message: "게임을 다시 시작하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "YES", style: .default) { (action) in
             //TODO: - 게임초기화시켜주는 부분 -> 함수 만들어서 넣어주기
@@ -502,8 +510,13 @@ final class GameViewController: UIViewController {
             //TODO: - 게임 이어서하게 만드는 부분 -> 함수 만들어서 넣어주기
             self.rePlayTimer()
         }
+        let endAction = UIAlertAction(title: "게임 종료", style: .cancel) { (action) in
+            //TODO: - 게임 처음 화면으로 돌아가기
+            self.dismiss(animated: true, completion: nil)
+        }
         alert.addAction(resetAction)
         alert.addAction(continueAction)
+        alert.addAction(endAction)
         present(alert, animated: false, completion: nil)
     }
     
@@ -641,7 +654,7 @@ final class GameViewController: UIViewController {
             }else if self.startTimerNum == -1 {
                 self.mainTimer.invalidate()
                 self.isRunning = false
-                self.alertGameOver()
+                self.scoreAlert()
             }
         }
     }
@@ -652,7 +665,7 @@ final class GameViewController: UIViewController {
         partTimerNum[idx]-=1
         DispatchQueue.main.async() {
             if self.partTimerNum[idx] >= 0 && self.partTimerNum[idx] <= Constatns.PART_TIME {
-                print("\(idx)번째 \(self.partTimerNum[idx])")
+                
             }else {
                 self.statusArr[idx] = "두더지"
                 self.btnStatus[idx].setImage(UIImage(named: "두더지"), for: .normal)
