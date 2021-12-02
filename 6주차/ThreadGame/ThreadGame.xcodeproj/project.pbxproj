@@ -11,6 +11,8 @@
 		9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A372756C5AE00F7B8D1 /* StartViewController.swift */; };
 		9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */; };
 		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
+		9FCEDFFA2759290400748C97 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEDFF92759290400748C97 /* RankCell.swift */; };
+		9FCEDFFC27592A0200748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEDFFB27592A0200748C97 /* RankViewController + TableView.swift */; };
 		9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9027527C0000890577 /* AppDelegate.swift */; };
 		9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9227527C0000890577 /* SceneDelegate.swift */; };
 		9FF06B9A27527C0100890577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF06B9927527C0100890577 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		9F442A372756C5AE00F7B8D1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
+		9FCEDFF92759290400748C97 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
+		9FCEDFFB27592A0200748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankViewController + TableView.swift"; sourceTree = "<group>"; };
 		9FF06B8D27527C0000890577 /* ThreadGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF06B9027527C0000890577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF06B9227527C0000890577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,69 @@
 			path = Constatns;
 			sourceTree = "<group>";
 		};
+		9FCEDFF22759277500748C97 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				9FF5960527588EC500048CA3 /* MakeNicNameViewController.swift */,
+				9FF06BA72753C95D00890577 /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		9FCEDFF32759278E00748C97 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9FCEDFF62759289F00748C97 /* Cells */,
+				9FCEDFF52759288700748C97 /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9FCEDFF42759286500748C97 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9FCEDFF32759278E00748C97 /* Home */,
+				9FCEDFF22759277500748C97 /* Game */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9FCEDFF52759288700748C97 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F442A372756C5AE00F7B8D1 /* StartViewController.swift */,
+				9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */,
+				9FF596072758A65200048CA3 /* RankViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9FCEDFF62759289F00748C97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9FCEDFF92759290400748C97 /* RankCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9FCEDFF7275928C600748C97 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9F9FE1202756409E000535C3 /* Constatns */,
+				9FCEDFF8275928D900748C97 /* Extensions */,
+				9FF06B9927527C0100890577 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9FCEDFF8275928D900748C97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FCEDFFB27592A0200748C97 /* RankViewController + TableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9FF06B8427527C0000890577 = {
 			isa = PBXGroup;
 			children = (
@@ -88,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				9FF06BA427527C6400890577 /* Applications */,
+				9FCEDFF7275928C600748C97 /* Resource */,
 				9FF06BA627527C8400890577 /* Sources */,
-				9FF06B9927527C0100890577 /* Assets.xcassets */,
 				9FF06B9B27527C0100890577 /* LaunchScreen.storyboard */,
 				9FF06B9E27527C0100890577 /* Info.plist */,
 			);
@@ -108,12 +175,7 @@
 		9FF06BA627527C8400890577 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9F9FE1202756409E000535C3 /* Constatns */,
-				9F442A372756C5AE00F7B8D1 /* StartViewController.swift */,
-				9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */,
-				9FF5960527588EC500048CA3 /* MakeNicNameViewController.swift */,
-				9FF06BA72753C95D00890577 /* GameViewController.swift */,
-				9FF596072758A65200048CA3 /* RankViewController.swift */,
+				9FCEDFF42759286500748C97 /* Scenes */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -245,10 +307,12 @@
 				9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */,
 				9FF5960627588EC500048CA3 /* MakeNicNameViewController.swift in Sources */,
 				9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */,
+				9FCEDFFC27592A0200748C97 /* RankViewController + TableView.swift in Sources */,
 				9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */,
 				9F9FE122275640AC000535C3 /* Constatns.swift in Sources */,
 				9FF596082758A65200048CA3 /* RankViewController.swift in Sources */,
 				9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */,
+				9FCEDFFA2759290400748C97 /* RankCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,8 +47,8 @@ final class GameViewController: UIViewController {
         $0.textColor = .black
     }
     
-    //TODO: - 시간
-    //TODO: - 나중에 UIProgressView로 바꿀지 고민해보자.
+    // 시간
+    //TODO: - 나중에 UIProgressView로 바꿀지 고민해보자. ( NO )
     private lazy var timeLabel = UILabel().then {
         $0.text = "\(startTimerNum)초"
         $0.font = .systemFont(ofSize: 20.0, weight: .semibold)
@@ -302,24 +302,6 @@ final class GameViewController: UIViewController {
     
     //MARK: - Functions
     
-    func loadUserInfo(){
-        if UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) == nil {
-            rankDict = [String:Any]()
-        } else {
-            rankDict = UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) as! [String:Int]
-        }
-    }
-    
-    func randomTarget(){
-        let randomIdx = Int.random(in: 0..<vegetables.count)
-        harvestTarget = vegetables[randomIdx]
-        targetImgView.image = UIImage(named: harvestTarget)
-        
-        targetCnt = Int.random(in: 1...4)
-        targetLabel.text = "\(harvestTarget) 수확 갯수 : \(targetCnt)"
-        
-    }
-    
     func setUI(){
         self.view.addSubview(headerView)
         headerView.addSubview(logoImg)
@@ -462,23 +444,16 @@ final class GameViewController: UIViewController {
         
     } // setUI end
     
-    func startGameTimer() {
-        DispatchQueue.global().async { [self] in
-            isRunning = true
-            let runLoop = RunLoop.current
-            
-            //타이머 사용값 초기화
-            startTimerNum = Constatns.GAME_TIME
-            //1초 간격 타이머 시작
-            mainTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
-            
-            while isRunning {
-                runLoop.run(until: Date().addingTimeInterval(0.1))
-            }
+    // 유저 정보 로드
+    func loadUserInfo(){
+        if UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) == nil {
+            rankDict = [String:Any]()
+        } else {
+            rankDict = UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) as! [String:Int]
         }
-        
     }
     
+    // 게임 초기화
     func initGame(){
         pauseTimer()
         partTimerNum = [Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME]
@@ -496,10 +471,39 @@ final class GameViewController: UIViewController {
         
     }
     
+    // 게임 시작시 타이머 설정
+    func startGameTimer() {
+        DispatchQueue.global().async { [self] in
+            isRunning = true
+            let runLoop = RunLoop.current
+            
+            //타이머 사용값 초기화
+            startTimerNum = Constatns.GAME_TIME
+            //1초 간격 타이머 시작
+            mainTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+            
+            while isRunning {
+                runLoop.run(until: Date().addingTimeInterval(0.1))
+            }
+        }
+        
+    }
+    
+    // 랜덤으로 수확대상, 갯수 설정
+    func randomTarget(){
+        let randomIdx = Int.random(in: 0..<vegetables.count)
+        harvestTarget = vegetables[randomIdx]
+        targetImgView.image = UIImage(named: harvestTarget)
+        
+        targetCnt = Int.random(in: 1...4)
+        targetLabel.text = "\(harvestTarget) 수확 갯수 : \(targetCnt)"
+        
+    }
+    
+    // 점수출력 알림창
     func scoreAlert(){
         rankDict[nicNameLabel.text ?? "이름없음"] = scoreNum
         UserDefaults.standard.set(rankDict, forKey: Constatns.RANK_INFO)
-        print("확인",rankDict)
         let alert = UIAlertController(title: "나의 점수", message: "👏🏻 축하합니다 \(scoreNum)점을 획득하셨습니다. 👏🏻", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
             self.alertGameOver()
@@ -508,6 +512,7 @@ final class GameViewController: UIViewController {
         present(alert, animated: false, completion: nil)
     }
     
+    // 게임 종료시 알림창
     func alertGameOver(){
         //타이머 종료 후 알림창 띄우기
         let alert = UIAlertController(title: "게임오버", message: "게임을 다시 시작하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
@@ -519,22 +524,14 @@ final class GameViewController: UIViewController {
         let cancleAction = UIAlertAction(title: "NO", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
             Constatns.isStart = false
-//            self.view.window?.rootViewController = self
             self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
-//            self.dismiss(animated: true, completion: nil)
-//            self.view.window?.rootViewController?.dismiss(animated: false, completion: {
-//              let startVC = StartViewController()
-//                startVC.modalPresentationStyle = .fullScreen
-//                let sceneDelegate = UIApplication.shared.connectedScenes
-//                                .first!.delegate as! SceneDelegate
-//                sceneDelegate.window?.rootViewController?.present(startVC, animated: true, completion: nil)
-//            })
         }
         alert.addAction(okAction)
         alert.addAction(cancleAction)
         present(alert, animated: false, completion: nil)
     }
     
+    // 설정 알림창
     func alertSetting(){
         //타이머 종료 후 알림창 띄우기
         pauseTimer()
@@ -550,7 +547,6 @@ final class GameViewController: UIViewController {
         }
         let endAction = UIAlertAction(title: "게임 종료", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
-//            self.dismiss(animated: true, completion: nil)
             Constatns.isStart = false
             self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
         }
@@ -560,6 +556,7 @@ final class GameViewController: UIViewController {
         present(alert, animated: false, completion: nil)
     }
     
+    // 일시중지일때 타이머 모두 비활성화
     func pauseTimer(){
         mainTimer.invalidate()
         isRunning = false
@@ -571,6 +568,7 @@ final class GameViewController: UIViewController {
         }
     }
     
+    // 계속하기 눌렀을 때 타이머 다시 재생
     func rePlayTimer(){
         DispatchQueue.global().async { [self] in
             isRunning = true
@@ -602,6 +600,7 @@ final class GameViewController: UIViewController {
         }
     }
     
+    // 텃밭 이미지 변경 및 타이머 설정
     func changeImg(status: String, part: Int){
         if (!isTimming[part]){
             // 처음 시작할 경우와 끝이 난 경우
@@ -699,6 +698,7 @@ final class GameViewController: UIViewController {
         }
     }
     
+    // 텃밭 타이머 동작
     @objc func partTimerCallback(_ timer: Timer) {
         let idx: Int = timer.userInfo as! Int
         
@@ -717,15 +717,18 @@ final class GameViewController: UIViewController {
         }
     }
     
+    // 설정 버튼 누르면 알림창 나옴
     @objc func settingBtnPressed(_ sender: UIButton) {
         alertSetting()
     }
     
+    // 텃밭을 눌렀을때 실행
     @objc func partBtnPressed(_ sender: UIButton) {
         let idx = sender.tag - 1
         changeImg(status: statusArr[idx],part: idx)
     }
     
+    // 아이템을 눌렀을때 실행
     @objc func itemBtnPressed(_ sender: UIButton) {
         if sender.tag >= 10 && sender.tag <= 13 {
             selectItem = orderItemArr[sender.tag-9]

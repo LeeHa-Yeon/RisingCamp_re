@@ -11,14 +11,12 @@ import SnapKit
 
 class MakeNicNameViewController: UIViewController {
 
-    //MARK: - UIComponents
-    
-    
     //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if Constatns.isStart {
@@ -47,7 +45,5 @@ class MakeNicNameViewController: UIViewController {
         alert.addAction(cancleBtn)
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
     
 }

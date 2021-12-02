@@ -50,9 +50,6 @@ class HowToPlayViewController: UIViewController {
         howToImges.append($0)
     }
     
-    
-    
-    
     private lazy var footerView = UIView().then {
         $0.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
@@ -66,6 +63,7 @@ class HowToPlayViewController: UIViewController {
     }
     
     //MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -73,6 +71,7 @@ class HowToPlayViewController: UIViewController {
     }
     
     //MARK: - Functions
+    
     func setUI(){
         view.backgroundColor = .black
         let viewFrameWidth = view.frame.width
@@ -85,15 +84,8 @@ class HowToPlayViewController: UIViewController {
         view.addSubview(scrollView)
         view.addSubview(pageControl)
         
-        
         self.view.addSubview(footerView)
         footerView.addSubview(confirmBtn)
-        
-//        self.contentView.snp.makeConstraints{
-//            $0.top.equalToSuperview()
-//            $0.leading.trailing.equalToSuperview().offset(0.0)
-//            $0.bottom.equalTo(footerView.snp.top)
-//        }
         
         scrollView.snp.makeConstraints{
             $0.edges.equalToSuperview().offset(0)
@@ -166,5 +158,4 @@ extension HowToPlayViewController: UIScrollViewDelegate {
         let value = scrollView.contentOffset.x / scrollView.frame.size.width
         setPageControlSelectedPage(currentPage: Int(round(value)))
     }
-
 }

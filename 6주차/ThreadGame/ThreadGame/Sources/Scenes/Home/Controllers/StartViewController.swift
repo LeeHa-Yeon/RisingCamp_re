@@ -42,12 +42,14 @@ class StartViewController: UIViewController {
     }
     
     //MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
     }
     
     //MARK: - Functions
+    
     func setUI(){
         self.view.addSubview(bgImg)
         self.view.addSubview(gameBtn)
