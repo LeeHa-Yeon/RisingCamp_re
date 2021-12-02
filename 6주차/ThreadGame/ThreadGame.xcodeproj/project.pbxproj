@@ -11,8 +11,8 @@
 		9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A372756C5AE00F7B8D1 /* StartViewController.swift */; };
 		9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */; };
 		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
-		9FCEDFFE2759315100748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEDFFD2759315100748C97 /* RankViewController + TableView.swift */; };
-		9FCEE0002759318500748C97 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEDFFF2759318500748C97 /* RankCell.swift */; };
+		9FCEE0032759332F00748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */; };
+		9FCEE0062759338500748C97 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEE0052759338500748C97 /* RankCell.swift */; };
 		9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9027527C0000890577 /* AppDelegate.swift */; };
 		9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF06B9227527C0000890577 /* SceneDelegate.swift */; };
 		9FF06B9A27527C0100890577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF06B9927527C0100890577 /* Assets.xcassets */; };
@@ -28,8 +28,8 @@
 		9F442A372756C5AE00F7B8D1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
-		9FCEDFFD2759315100748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RankViewController + TableView.swift"; path = "../../../../../../../../Documents/RankViewController + TableView.swift"; sourceTree = "<group>"; };
-		9FCEDFFF2759318500748C97 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankCell.swift; path = ../../../../../../../../../../Documents/RankCell.swift; sourceTree = "<group>"; };
+		9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankViewController + TableView.swift"; sourceTree = "<group>"; };
+		9FCEE0052759338500748C97 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		9FF06B8D27527C0000890577 /* ThreadGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF06B9027527C0000890577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF06B9227527C0000890577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		9FCEDFF32759278E00748C97 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9FCEDFF62759289F00748C97 /* Cells */,
+				9FCEE0042759337500748C97 /* Cells */,
 				9FCEDFF52759288700748C97 /* Controllers */,
 			);
 			path = Home;
@@ -107,30 +107,30 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9FCEDFF62759289F00748C97 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				9FCEDFFF2759318500748C97 /* RankCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		9FCEDFF7275928C600748C97 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9FCEE0012759331800748C97 /* Extensions */,
 				9F9FE1202756409E000535C3 /* Constatns */,
-				9FCEDFF8275928D900748C97 /* Extensions */,
 				9FF06B9927527C0100890577 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		9FCEDFF8275928D900748C97 /* Extensions */ = {
+		9FCEE0012759331800748C97 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9FCEDFFD2759315100748C97 /* RankViewController + TableView.swift */,
+				9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FCEE0042759337500748C97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9FCEE0052759338500748C97 /* RankCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9FF06B8427527C0000890577 = {
@@ -303,15 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FCEE0002759318500748C97 /* RankCell.swift in Sources */,
 				9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */,
 				9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */,
 				9FF5960627588EC500048CA3 /* MakeNicNameViewController.swift in Sources */,
 				9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */,
-				9FCEDFFE2759315100748C97 /* RankViewController + TableView.swift in Sources */,
 				9FF06B9127527C0000890577 /* AppDelegate.swift in Sources */,
 				9F9FE122275640AC000535C3 /* Constatns.swift in Sources */,
+				9FCEE0062759338500748C97 /* RankCell.swift in Sources */,
 				9FF596082758A65200048CA3 /* RankViewController.swift in Sources */,
+				9FCEE0032759332F00748C97 /* RankViewController + TableView.swift in Sources */,
 				9FF06B9327527C0000890577 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
