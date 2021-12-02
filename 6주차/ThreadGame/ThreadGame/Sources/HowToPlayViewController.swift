@@ -6,13 +6,52 @@
 //
 
 import UIKit
+import Then
+import SnapKit
 
 class HowToPlayViewController: UIViewController {
 
     //MARK: - UIComponents
-    private lazy var contentView = UIView().then {
-        $0.backgroundColor = .brown
+    
+    private lazy var pageControl = UIPageControl().then {
+        $0.numberOfPages = howToImges.count
+
     }
+    
+    private lazy var scrollView = UIScrollView().then {
+        $0.isScrollEnabled = true
+        $0.isPagingEnabled = true
+    }
+    
+    private lazy var scrollContentsView = UIView().then {
+        $0.backgroundColor = .black
+    }
+    
+    var howToImges = [UIImageView]()
+    
+    private lazy var firstImg = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.image = #imageLiteral(resourceName: "첫번째방법")
+        $0.clipsToBounds = true
+        howToImges.append($0)
+    }
+    
+    private lazy var secondImg = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.image = #imageLiteral(resourceName: "시작화면")
+        $0.clipsToBounds = true
+        howToImges.append($0)
+    }
+    
+    private lazy var thiredImg = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.image = #imageLiteral(resourceName: "첫번째방법")
+        $0.clipsToBounds = true
+        howToImges.append($0)
+    }
+    
+    
+    
     
     private lazy var footerView = UIView().then {
         $0.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -30,18 +69,67 @@ class HowToPlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setScrollView()
     }
     
     //MARK: - Functions
     func setUI(){
-        self.view.addSubview(contentView)
+        view.backgroundColor = .black
+        let viewFrameWidth = view.frame.width
+        let viewFrameHeight = view.frame.height - 130
+        
+        scrollContentsView.addSubview(firstImg)
+        scrollContentsView.addSubview(secondImg)
+        scrollContentsView.addSubview(thiredImg)
+        scrollView.addSubview(scrollContentsView)
+        view.addSubview(scrollView)
+        view.addSubview(pageControl)
+        
+        
         self.view.addSubview(footerView)
         footerView.addSubview(confirmBtn)
         
-        self.contentView.snp.makeConstraints{
-            $0.top.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().offset(0.0)
-            $0.bottom.equalTo(footerView.snp.top)
+//        self.contentView.snp.makeConstraints{
+//            $0.top.equalToSuperview()
+//            $0.leading.trailing.equalToSuperview().offset(0.0)
+//            $0.bottom.equalTo(footerView.snp.top)
+//        }
+        
+        scrollView.snp.makeConstraints{
+            $0.edges.equalToSuperview().offset(0)
+        }
+        
+        firstImg.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(0.0)
+            $0.leading.equalToSuperview().inset(viewFrameWidth*CGFloat(0))
+            $0.width.equalTo(viewFrameWidth)
+            $0.height.equalTo(viewFrameHeight)
+        }
+        
+        secondImg.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(0.0)
+            $0.leading.equalToSuperview().inset(viewFrameWidth*CGFloat(1))
+            $0.width.equalTo(viewFrameWidth)
+            $0.height.equalTo(viewFrameHeight)
+        }
+        
+        thiredImg.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(0.0)
+            $0.leading.equalToSuperview().inset(viewFrameWidth*CGFloat(2))
+            $0.width.equalTo(viewFrameWidth)
+            $0.height.equalTo(viewFrameHeight)
+        }
+        
+        scrollContentsView.snp.makeConstraints{
+            $0.edges.equalTo(0)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.width.equalTo(viewFrameWidth * CGFloat(howToImges.count))
+            $0.height.equalTo(viewFrameHeight)
+        }
+        
+        pageControl.snp.makeConstraints{
+            $0.bottom.equalTo(footerView.snp.top).inset(-10)
+            $0.centerX.equalToSuperview()
         }
         
         self.footerView.snp.makeConstraints{
@@ -56,10 +144,27 @@ class HowToPlayViewController: UIViewController {
         }
     }
     
+    func setScrollView(){
+        scrollView.delegate = self
+    }
+    
+    private func setPageControlSelectedPage(currentPage: Int) {
+        pageControl.currentPage = currentPage
+    }
+    
+    
     //MARK: - objc Functions
     
     @objc func moveToStartVC(){
         self.dismiss(animated: true, completion: nil)
     }
  
+}
+
+extension HowToPlayViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let value = scrollView.contentOffset.x / scrollView.frame.size.width
+        setPageControlSelectedPage(currentPage: Int(round(value)))
+    }
+
 }
