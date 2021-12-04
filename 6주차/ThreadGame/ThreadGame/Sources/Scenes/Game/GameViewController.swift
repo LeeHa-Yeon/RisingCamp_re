@@ -16,7 +16,7 @@ final class GameViewController: UIViewController {
     
     var orderItemArr = ["시작","삽","씨앗","물뿌리개","수확"]
     var vegetables = ["양파","당근","무","배추","호박","대파"]
-    var statusArr = ["초기","초기","초기","초기","초기","초기","초기","초기","초기"]
+    var statusArr = [String](repeating: "초기", count: 9)
     var btnStatus = [UIButton]()
     
     //MARK: - UIComponents
@@ -58,9 +58,11 @@ final class GameViewController: UIViewController {
     var startTimerNum: Int = Constatns.GAME_TIME  // 게임 시작 시간
     var isRunning = false // 게임 실행중인지
     
-    var partTimer: [Timer] = [Timer(),Timer(),Timer(),Timer(),Timer(),Timer(),Timer(),Timer(),Timer()]
-    var partTimerNum:[Int] = [Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME]
-    var isTimming:[Bool] = [false,false,false,false,false,false,false,false,false]
+    var partTimer: [Timer] = [Timer](repeating: Timer(), count: 9)
+    // var partTimer2:
+    var partTimerNum:[Int] = [Int](repeating: Constatns.PART_TIME, count: 9)
+    var isTimming:[Bool] = [Bool](repeating: false, count: 9)
+    
     
     private lazy var scoreLabel = UILabel().then {
         $0.text = "\(scoreNum)점"
@@ -74,7 +76,7 @@ final class GameViewController: UIViewController {
         $0.font = .systemFont(ofSize: 14.0, weight: .semibold)
         $0.textColor = .black
     }
-    var doneTarget = ["양파":0,"당근":0,"무":0,"배추":0,"호박":0,"대파":0] // 사용x
+    
     var doneCnt: Int = 0  // 수확한 갯수
     
     // stackView distribution(x축정렬), alignment(y축정렬)
@@ -456,9 +458,9 @@ final class GameViewController: UIViewController {
     // 게임 초기화
     func initGame(){
         pauseTimer()
-        partTimerNum = [Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME,Constatns.PART_TIME]
-        isTimming = [false,false,false,false,false,false,false,false,false]
-        statusArr = ["초기","초기","초기","초기","초기","초기","초기","초기","초기"]
+        partTimerNum = [Int](repeating: Constatns.PART_TIME, count: 9)
+        isTimming = [Bool](repeating: false, count: 9)
+        statusArr = [String](repeating: "초기", count: 9)
         timeLabel.text = "\(Constatns.GAME_TIME)초"
         scoreNum = 0
         scoreLabel.text = "\(scoreNum)점"
