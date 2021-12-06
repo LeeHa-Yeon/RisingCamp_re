@@ -18,6 +18,11 @@ class StartViewController: UIViewController {
         $0.contentMode = .scaleAspectFill
     }
     
+    private lazy var settingBtn = UIButton().then {
+        $0.setImage(UIImage(named: "설정"), for: .normal)
+        $0.addTarget(self, action: #selector(moveToSettingVC), for: .touchUpInside)
+    }
+    
     private lazy var gameBtn = UIButton().then {
         $0.setTitle("게임시작", for: .normal)
         $0.addTarget(self, action: #selector(moveToMakeNicVC), for: .touchUpInside)
@@ -52,12 +57,19 @@ class StartViewController: UIViewController {
     
     func setUI(){
         self.view.addSubview(bgImg)
+        self.view.addSubview(settingBtn)
         self.view.addSubview(gameBtn)
         self.view.addSubview(howBtn)
         self.view.addSubview(rankListBtn)
         
         bgImg.snp.makeConstraints{
             $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        settingBtn.snp.makeConstraints{
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(30)
+            $0.trailing.equalToSuperview().offset(-30)
+            $0.width.height.equalTo(30)
         }
         
         gameBtn.snp.makeConstraints{
@@ -98,6 +110,14 @@ class StartViewController: UIViewController {
         
         rankListVC.modalPresentationStyle = .fullScreen
         self.present(rankListVC,animated: true,completion: nil)
+    }
+    
+    @objc func moveToSettingVC(){
+        let settingVC = SettingViewController()
+        
+        settingVC.modalPresentationStyle = .overFullScreen
+//        settingVC.view.alpha = 0.9
+        self.present(settingVC, animated: true, completion: nil)
     }
     
 }
