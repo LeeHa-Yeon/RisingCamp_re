@@ -32,6 +32,7 @@ class SettingViewController: UIViewController {
     //MARK: - Functions
     
     func setUI(){
+        view.layer.cornerRadius = 20
         view.backgroundColor = .gray
         view.addSubview(confirmBtn)
         
