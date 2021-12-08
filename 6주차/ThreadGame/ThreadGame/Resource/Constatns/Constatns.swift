@@ -14,6 +14,12 @@ struct Constatns {
     static let USER_NICNAME:String = "userNicName"
     static let RANK_INFO: String = "rankInfo"
     
+    static let BGM_STATUS: String = "bgmStatus"
+    static let SOUNDEFFECT_STATUS: String = "soundEffectStatus"
+    
+    static let BGM_VOLUME: String = "bgmVolume"
+    static let SOUNDEFFECT_VOLUME: String = "soundEffectVolume"
+    
     // 게임창에서 dismiss할 때 닉네임 알림창이 안나타나기 위한 구분
     static var isStart: Bool = false
 }
