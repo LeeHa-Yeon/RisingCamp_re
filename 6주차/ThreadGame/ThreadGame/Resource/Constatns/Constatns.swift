@@ -20,6 +20,11 @@ struct Constatns {
     static let BGM_VOLUME: String = "bgmVolume"
     static let SOUNDEFFECT_VOLUME: String = "soundEffectVolume"
     
+    static let BGM_NAME: String = "배경음악"
+    static let SOUNDEFFECT_NAME_ONE: String = "효과음1" // 딸깍
+    static let SOUNDEFFECT_NAME_TWO: String = "효과음2" // 버블
+    
+    
     // 게임창에서 dismiss할 때 닉네임 알림창이 안나타나기 위한 구분
     static var isStart: Bool = false
 }

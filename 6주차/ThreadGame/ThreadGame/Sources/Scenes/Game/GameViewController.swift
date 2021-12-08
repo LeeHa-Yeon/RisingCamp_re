@@ -8,9 +8,13 @@
 import UIKit
 import Then
 import SnapKit
+import AVFoundation
 
 // final을 붙이는 이유 : 상속이 불가능하도록
 final class GameViewController: UIViewController {
+    
+    var BGM: AVAudioPlayer?
+    var soundEffect: AVAudioPlayer?
     
     var rankDict = [String:Any]()
     
@@ -291,6 +295,7 @@ final class GameViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadSoundStatus()
         setUI()
         startGameTimer()
         randomTarget()
@@ -300,7 +305,6 @@ final class GameViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     //MARK: - Functions
     
@@ -319,7 +323,7 @@ final class GameViewController: UIViewController {
         
         self.view.addSubview(footerView)
         footerView.addSubview(itemStackView)
-
+        
         nicNameLabel.text =  UserDefaults.standard.string(forKey: Constatns.USER_NICNAME)
         
         
@@ -452,6 +456,62 @@ final class GameViewController: UIViewController {
             rankDict = [String:Any]()
         } else {
             rankDict = UserDefaults.standard.dictionary(forKey: Constatns.RANK_INFO) as! [String:Int]
+        }
+    }
+    
+    // 배경음악 로드
+    func loadSoundStatus(){
+        if UserDefaults.standard.bool(forKey: Constatns.BGM_STATUS) {
+            playAudio()
+            BGM?.volume = UserDefaults.standard.float(forKey: Constatns.BGM_VOLUME)
+        }
+    }
+    
+    // 배경음악 재생
+    func playAudio() {
+        let url = Bundle.main.url(forResource: Constatns.BGM_NAME, withExtension: "mp3")
+        if let url = url{
+            do {
+                BGM = try AVAudioPlayer(contentsOf: url)
+                guard let sound = BGM else { return }
+                sound.play()
+                sound.numberOfLoops = 7
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("file not found")
+        }
+    }
+    
+    // 효과음1- 딸깍 재생
+    func soundEffectAudio() {
+        let url = Bundle.main.url(forResource: Constatns.SOUNDEFFECT_NAME_ONE, withExtension: "wav")
+        if let url = url{
+            do {
+                soundEffect = try AVAudioPlayer(contentsOf: url)
+                guard let sound = soundEffect else { return }
+                sound.play()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("file not found")
+        }
+    }
+    
+    func soundEffect2Audio() {
+        let url = Bundle.main.url(forResource: Constatns.SOUNDEFFECT_NAME_TWO, withExtension: "wav")
+        if let url = url{
+            do {
+                soundEffect = try AVAudioPlayer(contentsOf: url)
+                guard let sound = soundEffect else { return }
+                sound.play()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("file not found")
         }
     }
     
@@ -648,6 +708,10 @@ final class GameViewController: UIViewController {
                 btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
                 statusArr[part] = "초기"
                 doneCnt+=1
+                if UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS){
+                    soundEffect2Audio()
+                    soundEffect?.volume = UserDefaults.standard.float(forKey: Constatns.SOUNDEFFECT_VOLUME)
+                }
                 if targetCnt > doneCnt {
                     doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
                 }else {
@@ -732,6 +796,10 @@ final class GameViewController: UIViewController {
     
     // 아이템을 눌렀을때 실행
     @objc func itemBtnPressed(_ sender: UIButton) {
+        if UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS) {
+            soundEffectAudio()
+            soundEffect?.volume = UserDefaults.standard.float(forKey: Constatns.SOUNDEFFECT_VOLUME)
+        }
         if sender.tag >= 10 && sender.tag <= 13 {
             selectItem = orderItemArr[sender.tag-9]
         }else if sender.tag == 14 {

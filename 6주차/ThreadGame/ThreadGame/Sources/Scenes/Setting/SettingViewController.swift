@@ -93,7 +93,7 @@ class SettingViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUserDefaults()
+        loadUserDefaults()
         setUI()
     }
     
@@ -111,7 +111,7 @@ class SettingViewController: UIViewController {
     
     //MARK: - Functions
     
-    func setUserDefaults(){
+    func loadUserDefaults(){
         volumeSwitch.isOn = UserDefaults.standard.bool(forKey: Constatns.BGM_STATUS)
         soundEffectSwitch.isOn = UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS)
         volumeControl.value = UserDefaults.standard.float(forKey: Constatns.BGM_VOLUME)
@@ -195,7 +195,7 @@ class SettingViewController: UIViewController {
     }
     
     func soundEffectAudio() {
-        let url = Bundle.main.url(forResource: "jungle", withExtension: "wav")
+        let url = Bundle.main.url(forResource: Constatns.SOUNDEFFECT_NAME_TWO, withExtension: "wav")
         if let url = url{
             do {
                 soundEffect = try AVAudioPlayer(contentsOf: url)
@@ -216,7 +216,7 @@ class SettingViewController: UIViewController {
     }
     
     func playAudio() {
-        let url = Bundle.main.url(forResource: "배경음악", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: Constatns.BGM_NAME, withExtension: "mp3")
         if let url = url{
             do {
                 BGM = try AVAudioPlayer(contentsOf: url)
