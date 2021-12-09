@@ -12,6 +12,7 @@
 		9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */; };
 		9F84AD09276283D20094C2AB /* loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F84AD08276283D20094C2AB /* loding.json */; };
 		9F84AD0C276284CA0094C2AB /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84AD0B276284CA0094C2AB /* LodingViewController.swift */; };
+		9F84AD0F276288190094C2AB /* moveTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84AD0E276288190094C2AB /* moveTo.swift */; };
 		9F8BC7B3275D04110019FCCE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BC7B2275D04110019FCCE /* SettingViewController.swift */; };
 		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
 		9FCEE0032759332F00748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */; };
@@ -35,6 +36,7 @@
 		9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		9F84AD08276283D20094C2AB /* loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loding.json; sourceTree = "<group>"; };
 		9F84AD0B276284CA0094C2AB /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
+		9F84AD0E276288190094C2AB /* moveTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveTo.swift; sourceTree = "<group>"; };
 		9F8BC7B2275D04110019FCCE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
 		9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankViewController + TableView.swift"; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 				9F84AD0B276284CA0094C2AB /* LodingViewController.swift */,
 			);
 			path = Loding;
+			sourceTree = "<group>";
+		};
+		9F84AD0D276287D80094C2AB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9F84AD0E276288190094C2AB /* moveTo.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		9F8BC7B1275D03FE0019FCCE /* Setting */ = {
@@ -148,6 +158,7 @@
 		9FCEDFF7275928C600748C97 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F84AD0D276287D80094C2AB /* Protocol */,
 				9F84AD07276283C10094C2AB /* JSONFile */,
 				9FE00880276050630014EE18 /* AudioFiles */,
 				9FCEE0012759331800748C97 /* Extensions */,
@@ -357,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F84AD0F276288190094C2AB /* moveTo.swift in Sources */,
 				9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */,
 				9F84AD0C276284CA0094C2AB /* LodingViewController.swift in Sources */,
 				9F8BC7B3275D04110019FCCE /* SettingViewController.swift in Sources */,
