@@ -13,6 +13,7 @@
 		9F84AD09276283D20094C2AB /* loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F84AD08276283D20094C2AB /* loding.json */; };
 		9F84AD0C276284CA0094C2AB /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84AD0B276284CA0094C2AB /* LodingViewController.swift */; };
 		9F84AD0F276288190094C2AB /* moveTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84AD0E276288190094C2AB /* moveTo.swift */; };
+		9F8B2A2C2762B4BB00EFEA02 /* 효과음3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9F8B2A2B2762B4BB00EFEA02 /* 효과음3.wav */; };
 		9F8BC7B3275D04110019FCCE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BC7B2275D04110019FCCE /* SettingViewController.swift */; };
 		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
 		9FCEE0032759332F00748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */; };
@@ -37,6 +38,7 @@
 		9F84AD08276283D20094C2AB /* loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loding.json; sourceTree = "<group>"; };
 		9F84AD0B276284CA0094C2AB /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
 		9F84AD0E276288190094C2AB /* moveTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveTo.swift; sourceTree = "<group>"; };
+		9F8B2A2B2762B4BB00EFEA02 /* 효과음3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "효과음3.wav"; sourceTree = "<group>"; };
 		9F8BC7B2275D04110019FCCE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
 		9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankViewController + TableView.swift"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				9FE0088727613A530014EE18 /* 효과음1.wav */,
 				9FE0088527613A4B0014EE18 /* 효과음2.wav */,
+				9F8B2A2B2762B4BB00EFEA02 /* 효과음3.wav */,
 				9FE00883276057910014EE18 /* 배경음악.mp3 */,
 			);
 			path = AudioFiles;
@@ -315,6 +318,7 @@
 				9FF06B9D27527C0100890577 /* LaunchScreen.storyboard in Resources */,
 				9FF06B9A27527C0100890577 /* Assets.xcassets in Resources */,
 				9FE00884276057910014EE18 /* 배경음악.mp3 in Resources */,
+				9F8B2A2C2762B4BB00EFEA02 /* 효과음3.wav in Resources */,
 				9FE0088827613A530014EE18 /* 효과음1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

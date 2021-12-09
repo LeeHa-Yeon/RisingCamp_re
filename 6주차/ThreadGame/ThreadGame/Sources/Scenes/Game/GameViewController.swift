@@ -680,7 +680,8 @@ final class GameViewController: UIViewController {
         if (!isTimming[part]){
             // 처음 시작할 경우와 끝이 난 경우
             if status == "초기" && selectItem == "삽" {
-                btnStatus[part].setImage(UIImage(named: "텃밭"), for: .normal)
+                btnAnimation(btnStatus[part],imgName: "텃밭")
+                
                 statusArr[part] = "텃밭"
                 
                 DispatchQueue.global().async { [self] in
@@ -708,17 +709,18 @@ final class GameViewController: UIViewController {
             }
         }else {
             if status == "텃밭" && selectItem == "씨앗" {
-                btnStatus[part].setImage(UIImage(named: "새싹"), for: .normal)
+                btnAnimation(btnStatus[part],imgName: "새싹")
                 statusArr[part] = "새싹"
             } else if status == "새싹" && selectItem == "물뿌리개" {
-                btnStatus[part].setImage(UIImage(named: harvestTarget), for: .normal)
+                btnAnimation(btnStatus[part],imgName: harvestTarget)
                 statusArr[part] = "채소"
             } else if status == "채소" && selectItem == "수확" {
                 partTimer[part].invalidate()
                 partTimerNum[part] = Constatns.PART_TIME
                 isTimming[part] = false
                 
-                btnStatus[part].setImage(UIImage(named: "초기"), for: .normal)
+                harvestingAnimation(btnStatus[part])
+                
                 statusArr[part] = "초기"
                 doneCnt+=1
                 if UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS){
@@ -732,14 +734,8 @@ final class GameViewController: UIViewController {
                     scoreNum+=(targetCnt*10)
                     showToast(message: "점수가 \(targetCnt*10)점 올랐습니다.")
                     scoreLabel.text = "\(scoreNum)점"
-                    UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
-                        self.scoreLabel.transform = CGAffineTransform(translationX: 0, y: -30)
-                    } completion: { _ in
-                        UIView.animate(withDuration: 0.5) {
-                            self.scoreLabel.transform = .identity
-
-                        }
-                    }
+                    
+                    labelAnimation(scoreLabel)
 
                     randomTarget()
                     doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
@@ -749,6 +745,57 @@ final class GameViewController: UIViewController {
             }
         }
         
+    }
+    
+    func labelAnimation(_ sender: UILabel) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseOut) {
+            sender.textColor = .orange
+            sender.transform = CGAffineTransform(translationX: 0, y: -20)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                sender.textColor = .black
+                sender.transform = .identity
+            }
+        }
+    }
+    
+    func btnAnimation(_ sender: UIButton, imgName: String ) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
+            sender.alpha = 0.3
+        } completion: { _ in
+            UIView.animate(withDuration: 0.3) {
+                sender.transform = .identity
+                sender.alpha = 1.0
+                sender.setImage(UIImage(named: imgName), for: .normal)
+            }
+        }
+    }
+    
+    func harvestingAnimation(_ sender: UIButton ) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
+            let scale = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            let move = CGAffineTransform(translationX: 0, y: -15)
+            let combine = scale.concatenating(move)
+            sender.transform = combine
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                sender.transform = .identity
+                sender.setImage(UIImage(named: "초기"), for: .normal)
+            }
+        }
+    }
+    
+    func itemAnimation(_ sender: UIButton) {
+        UIView.animate(withDuration: 2.0, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 30, options: .curveEaseOut) {
+            let scale = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            let rotation = CGAffineTransform(rotationAngle: .pi)
+            let combine = scale.concatenating(rotation)
+            sender.transform = combine
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                sender.transform = .identity
+            }
+        }
     }
     
     //토스트 메시지
@@ -818,6 +865,7 @@ final class GameViewController: UIViewController {
     
     // 아이템을 눌렀을때 실행
     @objc func itemBtnPressed(_ sender: UIButton) {
+        itemAnimation(sender)
         if UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS) {
             soundEffectAudio()
             soundEffect?.volume = UserDefaults.standard.float(forKey: Constatns.SOUNDEFFECT_VOLUME)
