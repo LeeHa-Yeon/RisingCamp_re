@@ -11,6 +11,7 @@
 		9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A372756C5AE00F7B8D1 /* StartViewController.swift */; };
 		9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */; };
 		9F84AD09276283D20094C2AB /* loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F84AD08276283D20094C2AB /* loding.json */; };
+		9F84AD0C276284CA0094C2AB /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84AD0B276284CA0094C2AB /* LodingViewController.swift */; };
 		9F8BC7B3275D04110019FCCE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BC7B2275D04110019FCCE /* SettingViewController.swift */; };
 		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
 		9FCEE0032759332F00748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */; };
@@ -33,6 +34,7 @@
 		9F442A372756C5AE00F7B8D1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		9F84AD08276283D20094C2AB /* loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loding.json; sourceTree = "<group>"; };
+		9F84AD0B276284CA0094C2AB /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
 		9F8BC7B2275D04110019FCCE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
 		9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankViewController + TableView.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		9F84AD0A276283DC0094C2AB /* Loding */ = {
 			isa = PBXGroup;
 			children = (
+				9F84AD0B276284CA0094C2AB /* LodingViewController.swift */,
 			);
 			path = Loding;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */,
+				9F84AD0C276284CA0094C2AB /* LodingViewController.swift in Sources */,
 				9F8BC7B3275D04110019FCCE /* SettingViewController.swift in Sources */,
 				9FF06BA82753C95D00890577 /* GameViewController.swift in Sources */,
 				9FF5960627588EC500048CA3 /* MakeNicNameViewController.swift in Sources */,

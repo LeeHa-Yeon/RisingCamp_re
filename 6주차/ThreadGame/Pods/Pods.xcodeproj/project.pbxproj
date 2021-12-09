@@ -80,7 +80,7 @@
 		0F0E2BC81400FBB29062949EB69C469D /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		14A4193016454CDD42C01FC5F48337CE /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		2814D6A966C8E42425BA8036CCE45E0E /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
-		28E3AD2BE724D3EA6380495021B8C6E6 /* Pods-ThreadGame */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ThreadGame"; path = Pods_ThreadGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E3AD2BE724D3EA6380495021B8C6E6 /* Pods_ThreadGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreadGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B3A77096A2341DBEF8252D9372A1F8 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		349564A3DEDC4411E61F24BCBFE44029 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		39FDB22E74740D29284F0698E6EE7AF2 /* Then-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Then-Info.plist"; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		2F601247962FE4D1D0867B537B29FC34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28E3AD2BE724D3EA6380495021B8C6E6 /* Pods-ThreadGame */,
+				28E3AD2BE724D3EA6380495021B8C6E6 /* Pods_ThreadGame.framework */,
 				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
 				9317E4947CA2FE1B5D5999034C09CCA7 /* Then.framework */,
 			);
@@ -405,7 +405,7 @@
 			);
 			name = "Pods-ThreadGame";
 			productName = Pods_ThreadGame;
-			productReference = 28E3AD2BE724D3EA6380495021B8C6E6 /* Pods-ThreadGame */;
+			productReference = 28E3AD2BE724D3EA6380495021B8C6E6 /* Pods_ThreadGame.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
