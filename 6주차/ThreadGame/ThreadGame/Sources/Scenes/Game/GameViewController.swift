@@ -791,14 +791,17 @@ final class GameViewController: UIViewController {
     }
     
     func harvestingAnimation(_ sender: UIButton ) {
+        let originFrame: CGRect = sender.frame
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
             let scale = CGAffineTransform(scaleX: 1.5, y: 1.5)
             let move = CGAffineTransform(translationX: 0, y: -15)
             let combine = scale.concatenating(move)
             sender.transform = combine
         } completion: { _ in
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.1) {
                 sender.transform = .identity
+                sender.frame = originFrame
+            } completion: { _ in
                 sender.setImage(UIImage(named: "초기"), for: .normal)
             }
         }
