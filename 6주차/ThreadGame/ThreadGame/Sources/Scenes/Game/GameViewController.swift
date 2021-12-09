@@ -515,6 +515,21 @@ final class GameViewController: UIViewController {
         }
     }
     
+    func soundEffect3Audio() {
+        let url = Bundle.main.url(forResource: Constatns.SOUNDEFFECT_NAME_THREE, withExtension: "wav")
+        if let url = url{
+            do {
+                soundEffect = try AVAudioPlayer(contentsOf: url)
+                guard let sound = soundEffect else { return }
+                sound.play()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("file not found")
+        }
+    }
+    
     // 게임 초기화
     func initGame(){
         pauseTimer()
@@ -741,6 +756,10 @@ final class GameViewController: UIViewController {
                     doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
                 }
             }  else {
+                if UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS) {
+                    soundEffect3Audio()
+                    soundEffect?.volume = UserDefaults.standard.float(forKey: Constatns.SOUNDEFFECT_VOLUME)
+                }
                 showToast(message: "아이템 순서가 틀렸습니다.")
             }
         }
