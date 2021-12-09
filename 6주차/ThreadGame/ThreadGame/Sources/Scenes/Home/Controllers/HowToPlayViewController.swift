@@ -10,12 +10,12 @@ import Then
 import SnapKit
 
 class HowToPlayViewController: UIViewController {
-
+    
     //MARK: - UIComponents
     
     private lazy var pageControl = UIPageControl().then {
         $0.numberOfPages = howToImges.count
-
+        
     }
     
     private lazy var scrollView = UIScrollView().then {
@@ -148,9 +148,15 @@ class HowToPlayViewController: UIViewController {
     //MARK: - objc Functions
     
     @objc func moveToStartVC(){
-        self.dismiss(animated: true, completion: nil)
+        let transition = CATransition()
+        transition.duration = 1.0
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        self.view.window!.layer.add(transition, forKey: nil)
+        self.dismiss(animated: false, completion: nil)
     }
- 
+    
 }
 
 extension HowToPlayViewController: UIScrollViewDelegate {

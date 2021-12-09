@@ -94,6 +94,7 @@ class StartViewController: UIViewController {
     
     @objc func moveToMakeNicVC(){
         let makeNicNameVC = MakeNicNameViewController()
+        makeNicNameVC.modalTransitionStyle = .coverVertical
         makeNicNameVC.modalPresentationStyle = .fullScreen
         self.present(makeNicNameVC,animated: true,completion: nil)
         Constatns.isStart = true
@@ -101,20 +102,20 @@ class StartViewController: UIViewController {
     
     @objc func moveToHowVC(){
         let howToPlayVC = HowToPlayViewController()
+        howToPlayVC.modalTransitionStyle = .partialCurl
         howToPlayVC.modalPresentationStyle = .fullScreen
         self.present(howToPlayVC,animated: true,completion: nil)
     }
     
     @objc func moveToRankListVC(){
         let rankListVC = UINavigationController(rootViewController: RankViewController())
-        
         rankListVC.modalPresentationStyle = .fullScreen
         self.present(rankListVC,animated: true,completion: nil)
     }
     
     @objc func moveToSettingVC(){
         let settingVC = SettingViewController()
-        
+        settingVC.modalTransitionStyle = .coverVertical
         settingVC.modalPresentationStyle = .overFullScreen
 //        settingVC.view.alpha = 0.9
         self.present(settingVC, animated: true, completion: nil)

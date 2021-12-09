@@ -35,6 +35,7 @@ class MakeNicNameViewController: UIViewController {
         let okBtn = UIAlertAction(title: "결정", style: .default) { _ in
             UserDefaults.standard.set(alert.textFields?[0].text, forKey: Constatns.USER_NICNAME)
             let gameVC = GameViewController()
+            gameVC.modalTransitionStyle = .crossDissolve
             gameVC.modalPresentationStyle = .fullScreen
             self.present(gameVC,animated: true,completion: nil)
         }
@@ -43,6 +44,7 @@ class MakeNicNameViewController: UIViewController {
         }
         alert.addAction(okBtn)
         alert.addAction(cancleBtn)
+        alert.modalTransitionStyle = .coverVertical
         self.present(alert, animated: true, completion: nil)
     }
     

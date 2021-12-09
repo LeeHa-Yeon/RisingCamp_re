@@ -586,7 +586,14 @@ final class GameViewController: UIViewController {
         let cancleAction = UIAlertAction(title: "NO", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
             Constatns.isStart = false
-            self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+//            self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+            self.view.window?.rootViewController?.dismiss(animated: false, completion: {
+                let sceneDelegate = UIApplication.shared.connectedScenes
+                                .first!.delegate as! SceneDelegate
+              let startVC = StartViewController()
+                startVC.modalPresentationStyle = .fullScreen
+                sceneDelegate.window?.rootViewController?.present(startVC, animated: false, completion: nil)
+            })
         }
         alert.addAction(okAction)
         alert.addAction(cancleAction)
@@ -610,7 +617,13 @@ final class GameViewController: UIViewController {
         let endAction = UIAlertAction(title: "게임 종료", style: .cancel) { (action) in
             //TODO: - 게임 처음 화면으로 돌아가기
             Constatns.isStart = false
-            self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+            self.view.window?.rootViewController?.dismiss(animated: false, completion: {
+                let sceneDelegate = UIApplication.shared.connectedScenes
+                                .first!.delegate as! SceneDelegate
+              let startVC = StartViewController()
+                startVC.modalPresentationStyle = .fullScreen
+                sceneDelegate.window?.rootViewController?.present(startVC, animated: false, completion: nil)
+            })
         }
         alert.addAction(resetAction)
         alert.addAction(continueAction)
