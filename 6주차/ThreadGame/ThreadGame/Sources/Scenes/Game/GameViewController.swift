@@ -719,6 +719,15 @@ final class GameViewController: UIViewController {
                     scoreNum+=(targetCnt*10)
                     showToast(message: "점수가 \(targetCnt*10)점 올랐습니다.")
                     scoreLabel.text = "\(scoreNum)점"
+                    UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
+                        self.scoreLabel.transform = CGAffineTransform(translationX: 0, y: -30)
+                    } completion: { _ in
+                        UIView.animate(withDuration: 0.5) {
+                            self.scoreLabel.transform = .identity
+
+                        }
+                    }
+
                     randomTarget()
                     doneLabel.text = "내가 수확한 \(harvestTarget) 개수 : \(doneCnt)"
                 }

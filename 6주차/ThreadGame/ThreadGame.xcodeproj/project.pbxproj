@@ -10,6 +10,7 @@
 		26442359DE9140B50D00F816 /* Pods_ThreadGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49946AE1550BC2F184BAE4D /* Pods_ThreadGame.framework */; };
 		9F442A382756C5AE00F7B8D1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A372756C5AE00F7B8D1 /* StartViewController.swift */; };
 		9F442A3A2756D2B000F7B8D1 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */; };
+		9F84AD09276283D20094C2AB /* loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F84AD08276283D20094C2AB /* loding.json */; };
 		9F8BC7B3275D04110019FCCE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BC7B2275D04110019FCCE /* SettingViewController.swift */; };
 		9F9FE122275640AC000535C3 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FE121275640AC000535C3 /* Constatns.swift */; };
 		9FCEE0032759332F00748C97 /* RankViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */; };
@@ -31,6 +32,7 @@
 		959F3F11F9B1E65F2480EB3E /* Pods-ThreadGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadGame.debug.xcconfig"; path = "Target Support Files/Pods-ThreadGame/Pods-ThreadGame.debug.xcconfig"; sourceTree = "<group>"; };
 		9F442A372756C5AE00F7B8D1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9F442A392756D2B000F7B8D1 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		9F84AD08276283D20094C2AB /* loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loding.json; sourceTree = "<group>"; };
 		9F8BC7B2275D04110019FCCE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9F9FE121275640AC000535C3 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
 		9FCEE0022759332F00748C97 /* RankViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankViewController + TableView.swift"; sourceTree = "<group>"; };
@@ -70,6 +72,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F84AD07276283C10094C2AB /* JSONFile */ = {
+			isa = PBXGroup;
+			children = (
+				9F84AD08276283D20094C2AB /* loding.json */,
+			);
+			path = JSONFile;
+			sourceTree = "<group>";
+		};
+		9F84AD0A276283DC0094C2AB /* Loding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Loding;
+			sourceTree = "<group>";
+		};
 		9F8BC7B1275D03FE0019FCCE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +124,7 @@
 		9FCEDFF42759286500748C97 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9F84AD0A276283DC0094C2AB /* Loding */,
 				9F8BC7B1275D03FE0019FCCE /* Setting */,
 				9FCEDFF32759278E00748C97 /* Home */,
 				9FCEDFF22759277500748C97 /* Game */,
@@ -127,6 +145,7 @@
 		9FCEDFF7275928C600748C97 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F84AD07276283C10094C2AB /* JSONFile */,
 				9FE00880276050630014EE18 /* AudioFiles */,
 				9FCEE0012759331800748C97 /* Extensions */,
 				9F9FE1202756409E000535C3 /* Constatns */,
@@ -277,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F84AD09276283D20094C2AB /* loding.json in Resources */,
 				9FE0088627613A4B0014EE18 /* 효과음2.wav in Resources */,
 				9FF06B9D27527C0100890577 /* LaunchScreen.storyboard in Resources */,
 				9FF06B9A27527C0100890577 /* Assets.xcassets in Resources */,
