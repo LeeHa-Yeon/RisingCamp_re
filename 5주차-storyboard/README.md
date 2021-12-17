@@ -5,8 +5,9 @@
 
 # 📱  화면
 
-[5주차영상.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b942aced-28c7-4b27-a0e7-5fb35de0acea/5주차영상.mov)
-
+이미지 클릭하면 시연영상으로 넘어감 <br>
+<a href="https://www.youtube.com/watch?v=Ge9FAiSmBIc"> <img width="359" alt="스크린샷 2021-12-17 오후 12 26 19" src="https://user-images.githubusercontent.com/55241258/146484034-dd495002-94db-4969-b072-c5161d24e8b2.png"></a> <br>
+ 
 <img width="733" alt="스크린샷 2021-12-17 오전 10 36 56" src="https://user-images.githubusercontent.com/55241258/146474374-75524074-1830-46f1-937b-570299910c0a.png">
 <img width="740" alt="스크린샷 2021-12-17 오전 10 37 00" src="https://user-images.githubusercontent.com/55241258/146474379-57854b25-5024-4717-b742-9347a2cfd024.png">
 
@@ -48,5 +49,4 @@
     - 앱을 나갔다 들어와도 설정한 모드로 적용되어있음
 
 # 🔗  링크
-
-<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/5%EC%A3%BC%EC%B0%A8-storyboard"> 이동하기 </a>
+<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/5%EC%A3%BC%EC%B0%A8-storyboard/ExhibitionStoryboard"> 코드보기 </a>
