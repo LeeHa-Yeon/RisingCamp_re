@@ -5,22 +5,9 @@
 # 📝 배달의 민족 클론코딩
 
 ---
-
-### iPone 8으로 켰을 때
-
-[8.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd9b6369-dc12-4193-ab60-dbb51d2d27d4/8.mov)
-
-### iPone 8 plus으로 켰을 때
-
-[12 Pro Max.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/33d2cc4f-9eaf-4d57-8d82-82409a128ce5/12_Pro_Max.mov)
-
 ### iPone 11 Pro Max으로 켰을 때
-
-[11 Pro Max.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0902cf1a-80ab-4237-bb13-ce245c239175/11_Pro_Max.mov)
-
-### iPone 12 Pro Max으로 켰을 때
-
-[8 plus.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a796648-42dc-4d0e-9275-f690dc9004e6/8_plus.mov)
+이미지 클릭하면 시연영상으로 넘어감 <br>
+<a href="https://www.youtube.com/watch?v=BIB8EDNUeo0"> <img width="396" alt="스크린샷 2021-12-17 오후 12 10 10" src="https://user-images.githubusercontent.com/55241258/146482819-6552e8c4-231c-4cc4-8cff-e63821de7cd6.png"> </a>
 
 # 📝  구현 내용
 
@@ -54,3 +41,6 @@
 **진행** **시기**
 
 - 2021.10.13 ~ 2021.10.22
+
+# 링크
+<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/1%EC%A3%BC%EC%B0%A8/DeliveryPeopleCloneCoding"> 코드보기 </a>
