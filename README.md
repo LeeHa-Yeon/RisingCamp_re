@@ -1,4 +1,8 @@
 # RisingCamp_re
+
+### 개발일지 보기 링크
+https://pleasant-almandine-db5.notion.site/Rising-Camp-1-1-1f52936c1fbc41daa4674dc4ef76f72e
+
 🎖 컴공선배 - RisingCamp 5주차~🎖
 <p>
 한 프로젝트에 모든 과제를 넣었더니 관리하기 힘들어서 5주차부터 다시 만들어서 시작합니다! <br>
@@ -70,9 +74,9 @@
 |4**주차** |11.12-11.18| **Table View** | 냉장고 유통기한 앱 만들기 | 🛒 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/4%EC%A3%BC%EC%B0%A8">이동하기</a> |
 |5**주차** |11.19-11.25| **Awesome UI & iOS** | 전시회 앱 만들기(스토리보드버전) | 🖼 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/5%EC%A3%BC%EC%B0%A8-storyboard">이동하기</a> |
 |5**주차** |11.19-11.25| **Awesome UI & iOS** | 전시회 앱 만들기(코드버전) | 🖼 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/5%EC%A3%BC%EC%B0%A8">이동하기</a> |
-|6**주차** |11.26-12.02| **Thread** | 타이머를 이용하며 농사짓기 앱 만들기 | ⌛️ | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
-|7**주차** |12.03-12.09| **DB** | 스레드게임에 User Defaults로 앱을 고도화 | 🛠 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
-|8**주차** |12.03-12.09| **Animation** | 스레드게임에 다양한 애니메이션 효과 적용 | 🕹 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
+|6**주차** |11.26-12.02| **Thread** | 타이머를 이용하며 농사짓기 앱 만들기 | ⌛️ | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6주차/README/6주차">이동하기</a> |
+|7**주차** |12.03-12.09| **DB** | 스레드게임에 User Defaults로 앱을 고도화 | 🛠 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6주차/README/7주차">이동하기</a> |
+|8**주차** |12.03-12.09| **Animation** | 스레드게임에 다양한 애니메이션 효과 적용 | 🕹 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6주차/README/8주차">이동하기</a> |
 |9**주차** |12.24-12.30| **Network Intro & API**  | | | |
 |**10주차** |12.30-12.31| **Token & Restful** | | | |
 |11**주차** |01.07-01.21|  **Rising Test** | | | |
