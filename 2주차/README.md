@@ -8,18 +8,10 @@
 
 <img width="659" alt="dd" src="https://user-images.githubusercontent.com/55241258/146473134-9c15e77a-8dcc-4ec0-b61f-c2736d7f4958.png">
 
-### iPone 8
-
-[화면 기록 2021-10-27 오후 11.41.10.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/28d03be4-d7b2-4baf-80ce-1b4e2eb3ceb9/화면_기록_2021-10-27_오후_11.41.10.mov)
-
-### iPone 11 Pro Max
-
-[화면 기록 2021-10-27 오후 11.40.05.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b57d8473-b3ed-4dfe-8d64-b53d9cc50031/화면_기록_2021-10-27_오후_11.40.05.mov)
-
 ### iPone 12 Pro Max
 
-[화면 기록 2021-10-27 오후 11.38.18.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/395209b3-9a11-4d0d-9a31-f80b532554eb/화면_기록_2021-10-27_오후_11.38.18.mov)
-
+이미지 클릭하면 시연영상으로 넘어감 <br>
+<a href="https://www.youtube.com/watch?v=lH6S8_4c24E"> <img width="359" alt="스크린샷 2021-12-17 오후 12 15 28" src="https://user-images.githubusercontent.com/55241258/146483219-60082282-8b28-47cc-8610-2b92acc750b1.png"></a>
 
 # 📝  구현 내용
 
@@ -68,3 +60,7 @@
 **진행** **시기**
 
 - 2021.10.23 ~ 2021.10.28
+
+# 링크
+<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/2%EC%A3%BC%EC%B0%A8/ManyCloneCoding"> 코드보기 </a>
+
