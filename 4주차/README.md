@@ -24,7 +24,8 @@
 
 # 📱  화면
 
-[화면 기록 2021-12-03 오전 4.59.22.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/da38155b-4f83-43b9-b030-f7117436de13/화면_기록_2021-12-03_오전_4.59.22.mov)
+이미지 클릭하면 시연영상으로 넘어감 <br>
+<a href="https://www.youtube.com/watch?v=Qg1im8FzQSQ"> <img width="355" alt="스크린샷 2021-12-17 오후 12 23 34" src="https://user-images.githubusercontent.com/55241258/146483817-414c7dcd-e5dd-4fd7-85a5-993811e4b4c9.png"> </a> <br>
 
 <img width="727" alt="스크린샷 2021-12-17 오전 10 33 13" src="https://user-images.githubusercontent.com/55241258/146474132-54277e62-40d8-45c4-8098-ec31e1e97fe1.png">
 <img width="732" alt="스크린샷 2021-12-17 오전 10 33 03" src="https://user-images.githubusercontent.com/55241258/146474136-b3ca4e18-c91a-4488-ad0d-76d7e3a41125.png">
@@ -72,5 +73,5 @@
 
 - 2021.11.12 ~ 2021.11.18
 
-# 🔗  링크
-<a href= "https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/4%EC%A3%BC%EC%B0%A8/RefrigeratorManagement" >이동하기 </a>
+# 🔗  링크
+<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/4%EC%A3%BC%EC%B0%A8/RefrigeratorManagement"> 코드보기 </a>
