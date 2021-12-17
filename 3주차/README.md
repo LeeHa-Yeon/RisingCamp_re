@@ -5,8 +5,8 @@
 
 
 # 📱  화면
-
-https://user-images.githubusercontent.com/55241258/146473501-373de955-c9e2-441e-8f4c-d78b994563cd.mov
+이미지 클릭하면 시연영상으로 넘어감 <br>
+<a href="https://www.youtube.com/watch?v=p9N-o8kmWxY"><img width="367" alt="스크린샷 2021-12-17 오후 12 19 15" src="https://user-images.githubusercontent.com/55241258/146483501-761b5d85-253c-46f8-9772-915cfc16ad39.png"> </a> <br>
 <img width="505" alt="스크린샷 2021-12-17 오전 10 25 41" src="https://user-images.githubusercontent.com/55241258/146473513-419c157c-4ddf-4d91-8722-53dee3897640.png">
 <img width="512" alt="스크린샷 2021-12-17 오전 10 25 46" src="https://user-images.githubusercontent.com/55241258/146473516-cbd7fd77-15e2-4435-9c51-a9dc9ddf026f.png">
 <img width="503" alt="스크린샷 2021-12-17 오전 10 25 50" src="https://user-images.githubusercontent.com/55241258/146473521-8667ab84-2eef-4463-a4a0-7227d6912dc9.png">
@@ -78,5 +78,4 @@ https://user-images.githubusercontent.com/55241258/146473501-373de955-c9e2-441e-
 - 2021.11.05 ~ 2021.11.12
 
 # 🔗  링크
-
-<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/3%EC%A3%BC%EC%B0%A8/YeonMemo">이동하기</a>
+<a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/3%EC%A3%BC%EC%B0%A8/YeonMemo"> 코드보기 </a>
