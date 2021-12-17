@@ -2,15 +2,15 @@
 🎖 컴공선배 - RisingCamp 5주차~🎖
 <p>
 한 프로젝트에 모든 과제를 넣었더니 관리하기 힘들어서 5주차부터 다시 만들어서 시작합니다! <br>
-앞선 과제(1~4주차)도 추후 시간이 되면 이곳에 넣도록 하겠습니당 
-6주차
-  - 위 : 커밋 컨벤션을 지키면서 진행, 하지만 마지막 부분 파일 손실
-  - 아래 : 복구된 파일 
+앞선 과제(1~4주차)도 추후 시간이 되면 이곳에 넣도록 하겠습니당  <br>
+<6주차>  <br>
+  - 위 : 커밋 컨벤션을 지키면서 진행, 하지만 일부 파일 손실 <br>
+  - 아래 : 복구된 파일 + 그 후부터 다시 진행  <br>
 </p>
 
 # Rising Camp 3기
 
-> 프로그램 기간 : 2021.10.13 ~ 2021.01 ( 예정 )
+> 프로그램 기간 : 2021.10.13 ~ 2021.12
 
 <img width="539" alt="라이징캠프" src="https://user-images.githubusercontent.com/55241258/143273828-12f550c8-8c6b-4181-87be-20c1d5f96c0d.png">
 
@@ -71,14 +71,15 @@
 |2**주차** |10.23-10.28| **Layout** | Zigzag, Tving ,Alarm 클론코딩 | 📱 | 이동하기 |
 |3**주차** |10.29-11.11| **Life Cycle** | Memo 앱 만들기 | 📝 | 이동하기 |
 |4**주차** |11.12-11.18| **Table View** | 냉장고 유통기한 앱 만들기 | 🛒 | 이동하기 |
-|5**주차** |11.19-11.25| **Awesome UI & iOS** | 전시회 앱 만들기 | 🖼 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/5%EC%A3%BC%EC%B0%A8">이동하기</a> |
-|6**주차** |11.26-12.02| **Thread** | 타이머를 이용하녀 농사짓기 앱 만들기 | ⌛️ | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
-|7**주차** |10.13-10.20| | | | |
-|8**주차** |10.13-10.20| | | | |
-|9**주차** |10.13-10.20| | | | |
-|**10주차** |10.13-10.20| | | | |
-|11**주차** |10.13-10.20| | | | |
-|12**주차** |10.13-10.20| | | | |
+|5**주차** |11.19-11.25| **Awesome UI & iOS** | 전시회 앱 만들기(스토리보드버전) | 🖼 | |
+|5**주차** |11.19-11.25| **Awesome UI & iOS** | 전시회 앱 만들기(코드버전) | 🖼 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/5%EC%A3%BC%EC%B0%A8">이동하기</a> |
+|6**주차** |11.26-12.02| **Thread** | 타이머를 이용하며 농사짓기 앱 만들기 | ⌛️ | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
+|7**주차** |12.03-12.09| **DB** | 스레드게임에 User Defaults로 앱을 고도화 | 🛠 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
+|8**주차** |12.03-12.09| **Animation** | 스레드게임에 다양한 애니메이션 효과 적용 | 🕹 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6%EC%A3%BC%EC%B0%A8/ThreadGame">이동하기</a> |
+|9**주차** |12.24-12.30| **Network Intro & API**  | | | |
+|**10주차** |12.30-12.31| **Token & Restful** | | | |
+|11**주차** |01.07-01.21|  **Rising Test** | | | |
+|12**주차** |01.07-01.21|  **Rising Test** | | | |
 
 
 # 🗣️ 수료 결과 발표
