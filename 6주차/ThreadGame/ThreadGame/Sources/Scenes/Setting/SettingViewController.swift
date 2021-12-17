@@ -116,12 +116,12 @@ class SettingViewController: UIViewController {
         soundEffectSwitch.isOn = UserDefaults.standard.bool(forKey: Constatns.SOUNDEFFECT_STATUS)
         volumeControl.value = UserDefaults.standard.float(forKey: Constatns.BGM_VOLUME)
         soundEffectControl.value = UserDefaults.standard.float(forKey: Constatns.SOUNDEFFECT_VOLUME)
-        if !volumeSwitch.isOn {
-            volumeControl.isEnabled = false
-        }
-        if !soundEffectSwitch.isOn {
-            soundEffectControl.isEnabled = false
-        }
+
+        volumeControl.isEnabled = volumeSwitch.isOn
+        soundEffectControl.isEnabled = soundEffectSwitch.isOn
+//        if !soundEffectSwitch.isOn {
+//            soundEffectControl.isEnabled = false
+//        }
     }
     
     func setUI(){
