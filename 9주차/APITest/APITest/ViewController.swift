@@ -8,10 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let coronaManager = CoronaAPIManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemPink
+        coronaManager.requestCoronaCountryInfo { response in
+            print(response)
+        }
     }
 
 
