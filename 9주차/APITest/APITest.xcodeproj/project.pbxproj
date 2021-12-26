@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FB27789F5900AD595A /* CoronaResponse.swift */; };
 		9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */; };
 		9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */; };
 		9F7D8C9C276E281500FCE4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9B276E281500FCE4A5 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		27C8DC7E28E23FD41D2548E7 /* Pods-APITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITest.debug.xcconfig"; path = "Target Support Files/Pods-APITest/Pods-APITest.debug.xcconfig"; sourceTree = "<group>"; };
+		9F7967FB27789F5900AD595A /* CoronaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaResponse.swift; sourceTree = "<group>"; };
 		9F7D8C94276E281500FCE4A5 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F7967F527789E3400AD595A /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */,
+				9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		9F7967F627789E4000AD595A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9F7967F727789F0600AD595A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9F7967FA27789F3200AD595A /* Models */,
+				9F7967F927789F2B00AD595A /* Controllers */,
+				9F7967F827789F2100AD595A /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9F7967F827789F2100AD595A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F7967F927789F2B00AD595A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F7967FA27789F3200AD595A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F7967FB27789F5900AD595A /* CoronaResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9F7D8C8B276E281500FCE4A5 = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +121,9 @@
 		9F7D8C96276E281500FCE4A5 /* APITest */ = {
 			isa = PBXGroup;
 			children = (
-				9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */,
-				9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */,
+				9F7967F527789E3400AD595A /* Applications */,
+				9F7967F627789E4000AD595A /* Resource */,
+				9F7967F727789F0600AD595A /* Sources */,
 				9F7D8C9B276E281500FCE4A5 /* ViewController.swift */,
 				9F7D8C9D276E281500FCE4A5 /* Main.storyboard */,
 				9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */,
@@ -88,7 +139,6 @@
 				27C8DC7E28E23FD41D2548E7 /* Pods-APITest.debug.xcconfig */,
 				E4AF6CF83FB16E70EDAA687B /* Pods-APITest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7D8C9C276E281500FCE4A5 /* ViewController.swift in Sources */,
+				9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */,
 				9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */,
 				9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */,
 			);
