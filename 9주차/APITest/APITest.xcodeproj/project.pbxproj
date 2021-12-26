@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FB27789F5900AD595A /* CoronaResponse.swift */; };
+		9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */; };
 		9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */; };
 		9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */; };
 		9F7D8C9C276E281500FCE4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9B276E281500FCE4A5 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		27C8DC7E28E23FD41D2548E7 /* Pods-APITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITest.debug.xcconfig"; path = "Target Support Files/Pods-APITest/Pods-APITest.debug.xcconfig"; sourceTree = "<group>"; };
 		9F7967FB27789F5900AD595A /* CoronaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaResponse.swift; sourceTree = "<group>"; };
+		9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaAPIManager.swift; sourceTree = "<group>"; };
 		9F7D8C94276E281500FCE4A5 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9F7967FD2778E53E00AD595A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F7967FE2778E55100AD595A /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9F7967FE2778E55100AD595A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		9F7D8C8B276E281500FCE4A5 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +139,7 @@
 		9F7D8C96276E281500FCE4A5 /* APITest */ = {
 			isa = PBXGroup;
 			children = (
+				9F7967FD2778E53E00AD595A /* Network */,
 				9F7967F527789E3400AD595A /* Applications */,
 				9F7967F627789E4000AD595A /* Resource */,
 				9F7967F727789F0600AD595A /* Sources */,
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7D8C9C276E281500FCE4A5 /* ViewController.swift in Sources */,
+				9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */,
 				9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */,
 				9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */,
 				9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */,
