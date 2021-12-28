@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k8G-eZ-BgF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--우리 오늘 여기서 만날까?-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MeetSearchViewController" customModule="APITest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="지하철역을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adb-gq-ObN">
+                                <rect key="frame" x="30" y="368" width="354" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dMb-4m-YcL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0V-l3-y0i">
+                                <rect key="frame" x="192" y="458" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="찾기"/>
+                                <connections>
+                                    <action selector="testBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4YC-Y5-QJl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djI-1O-DNB">
+                                <rect key="frame" x="186" y="518" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Adb-gq-ObN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="4hu-YL-WFs"/>
+                            <constraint firstItem="djI-1O-DNB" firstAttribute="top" secondItem="p0V-l3-y0i" secondAttribute="bottom" constant="30" id="L8w-La-pXS"/>
+                            <constraint firstItem="p0V-l3-y0i" firstAttribute="top" secondItem="Adb-gq-ObN" secondAttribute="bottom" constant="30" id="Mju-cw-lIU"/>
+                            <constraint firstItem="djI-1O-DNB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WIt-6o-iZo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Adb-gq-ObN" secondAttribute="trailing" constant="30" id="ckc-b8-8gj"/>
+                            <constraint firstItem="Adb-gq-ObN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="oWm-4n-ifd"/>
+                            <constraint firstItem="p0V-l3-y0i" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="txF-hc-mDC"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z1u-Ye-OHc" appends="YES" id="lwj-wQ-5EG"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="우리 오늘 여기서 만날까?" id="ReF-YP-TjU"/>
+                    <connections>
+                        <outlet property="subwayTextField" destination="Adb-gq-ObN" id="Rxm-0m-Tii"/>
+                        <outlet property="testLabel" destination="djI-1O-DNB" id="gNE-17-gbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z1u-Ye-OHc"/>
+            </objects>
+            <point key="canvasLocation" x="1952.1739130434785" y="134.59821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T5s-Ik-GiV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="351-JM-5Gu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="globe.asia.australia" catalog="system" selectedImage="globe.asia.australia.fill" id="cDS-PI-WEZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="w93-O6-tMP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="b3d-JC-wjx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1c-yp-dOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="134.59821428571428"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="b0B-51-LmW">
+            <objects>
+                <viewController id="sag-zw-mnB" customClass="MyPageViewController" customModule="APITest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EMy-Ux-Qra">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="McJ-44-eh0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill.viewfinder" catalog="system" selectedImage="person.crop.square.fill" id="0QE-nb-qZ5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcy-Bl-zZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="871"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yKa-qR-MUu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="k8G-eZ-BgF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FCK-s7-Fqy">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="351-JM-5Gu" kind="relationship" relationship="viewControllers" id="gC6-at-T2E"/>
+                        <segue destination="sag-zw-mnB" kind="relationship" relationship="viewControllers" id="i3O-2c-7B8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STH-8s-01V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="550"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe.asia.australia" catalog="system" width="128" height="121"/>
+        <image name="globe.asia.australia.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="person.fill.viewfinder" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

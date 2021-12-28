@@ -6,7 +6,6 @@
 //
 
 
-
 struct CoronaResponse: Decodable {
     let korea: CountryInfo
     let seoul: CountryInfo

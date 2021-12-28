@@ -10,6 +10,16 @@
 		9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FB27789F5900AD595A /* CoronaResponse.swift */; };
 		9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */; };
 		9F7968022779C92E00AD595A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7968012779C92E00AD595A /* TestViewController.swift */; };
+		9F796804277B0BD900AD595A /* MeetPlaceSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F796803277B0BD900AD595A /* MeetPlaceSearch.storyboard */; };
+		9F796806277B0C1300AD595A /* MeetSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796805277B0C1300AD595A /* MeetSearchViewController.swift */; };
+		9F796808277B0C6200AD595A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F796807277B0C6200AD595A /* Login.storyboard */; };
+		9F79680A277B0C7700AD595A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796809277B0C7700AD595A /* LoginViewController.swift */; };
+		9F79680C277B11C100AD595A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79680B277B11C100AD595A /* MyPageViewController.swift */; };
+		9F79680E277B11D000AD595A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F79680D277B11D000AD595A /* MyPage.storyboard */; };
+		9F796810277B189F00AD595A /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79680F277B189F00AD595A /* KakaoAPIManager.swift */; };
+		9F796812277B1A2000AD595A /* SubwayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796811277B1A2000AD595A /* SubwayResponse.swift */; };
+		9F796816277B1BF500AD595A /* SubwayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796815277B1BF500AD595A /* SubwayRequest.swift */; };
+		9F796818277B234300AD595A /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796817277B234300AD595A /* CategoryResponse.swift */; };
 		9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */; };
 		9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */; };
 		9F7D8C9F276E281500FCE4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9D276E281500FCE4A5 /* Main.storyboard */; };
@@ -23,6 +33,16 @@
 		9F7967FB27789F5900AD595A /* CoronaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaResponse.swift; sourceTree = "<group>"; };
 		9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaAPIManager.swift; sourceTree = "<group>"; };
 		9F7968012779C92E00AD595A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9F796803277B0BD900AD595A /* MeetPlaceSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetPlaceSearch.storyboard; sourceTree = "<group>"; };
+		9F796805277B0C1300AD595A /* MeetSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSearchViewController.swift; sourceTree = "<group>"; };
+		9F796807277B0C6200AD595A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		9F796809277B0C7700AD595A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F79680B277B11C100AD595A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		9F79680D277B11D000AD595A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		9F79680F277B189F00AD595A /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
+		9F796811277B1A2000AD595A /* SubwayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayResponse.swift; sourceTree = "<group>"; };
+		9F796815277B1BF500AD595A /* SubwayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayRequest.swift; sourceTree = "<group>"; };
+		9F796817277B234300AD595A /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
 		9F7D8C94276E281500FCE4A5 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +105,9 @@
 		9F7967F827789F2100AD595A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F796807277B0C6200AD595A /* Login.storyboard */,
+				9F796803277B0BD900AD595A /* MeetPlaceSearch.storyboard */,
+				9F79680D277B11D000AD595A /* MyPage.storyboard */,
 				9F7D8C9D276E281500FCE4A5 /* Main.storyboard */,
 			);
 			path = Views;
@@ -93,7 +116,10 @@
 		9F7967F927789F2B00AD595A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F796809277B0C7700AD595A /* LoginViewController.swift */,
+				9F796805277B0C1300AD595A /* MeetSearchViewController.swift */,
 				9F7968012779C92E00AD595A /* TestViewController.swift */,
+				9F79680B277B11C100AD595A /* MyPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,7 +127,8 @@
 		9F7967FA27789F3200AD595A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9F7967FB27789F5900AD595A /* CoronaResponse.swift */,
+				9F796814277B1BD900AD595A /* Request */,
+				9F796813277B1BCF00AD595A /* Response */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,8 +145,27 @@
 			isa = PBXGroup;
 			children = (
 				9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */,
+				9F79680F277B189F00AD595A /* KakaoAPIManager.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		9F796813277B1BCF00AD595A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9F7967FB27789F5900AD595A /* CoronaResponse.swift */,
+				9F796811277B1A2000AD595A /* SubwayResponse.swift */,
+				9F796817277B234300AD595A /* CategoryResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		9F796814277B1BD900AD595A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9F796815277B1BF500AD595A /* SubwayRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		9F7D8C8B276E281500FCE4A5 = {
@@ -222,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7D8CA4276E281700FCE4A5 /* LaunchScreen.storyboard in Resources */,
+				9F79680E277B11D000AD595A /* MyPage.storyboard in Resources */,
 				9F7D8CA1276E281700FCE4A5 /* Assets.xcassets in Resources */,
 				9F7D8C9F276E281500FCE4A5 /* Main.storyboard in Resources */,
+				9F796808277B0C6200AD595A /* Login.storyboard in Resources */,
+				9F796804277B0BD900AD595A /* MeetPlaceSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +325,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F79680A277B0C7700AD595A /* LoginViewController.swift in Sources */,
 				9F7968022779C92E00AD595A /* TestViewController.swift in Sources */,
+				9F796818277B234300AD595A /* CategoryResponse.swift in Sources */,
+				9F796806277B0C1300AD595A /* MeetSearchViewController.swift in Sources */,
 				9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */,
 				9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */,
+				9F796810277B189F00AD595A /* KakaoAPIManager.swift in Sources */,
+				9F796816277B1BF500AD595A /* SubwayRequest.swift in Sources */,
 				9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */,
+				9F796812277B1A2000AD595A /* SubwayResponse.swift in Sources */,
 				9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */,
+				9F79680C277B11C100AD595A /* MyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +491,7 @@
 				INFOPLIST_FILE = APITest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetPlaceSearch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,7 +520,7 @@
 				INFOPLIST_FILE = APITest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetPlaceSearch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
