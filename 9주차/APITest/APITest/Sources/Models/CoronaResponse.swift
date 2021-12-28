@@ -6,28 +6,29 @@
 //
 
 
+
 struct CoronaResponse: Decodable {
-    let korea: countryInfo
-    let seoul: countryInfo
-    let busan: countryInfo
-    let daegu: countryInfo
-    let incheon: countryInfo
-    let gwangju: countryInfo
-    let daejeon: countryInfo
-    let ulsan: countryInfo
-    let sejong: countryInfo
-    let gyeonggi: countryInfo
-    let gangwon: countryInfo
-    let chungbuk: countryInfo
-    let chungnam: countryInfo
-    let jeonbuk: countryInfo
-    let jeonnam: countryInfo
-    let gyeongbuk: countryInfo
-    let gyeongnam: countryInfo
-    let jeju: countryInfo
+    let korea: CountryInfo
+    let seoul: CountryInfo
+    let busan: CountryInfo
+    let daegu: CountryInfo
+    let incheon: CountryInfo
+    let gwangju: CountryInfo
+    let daejeon: CountryInfo
+    let ulsan: CountryInfo
+    let sejong: CountryInfo
+    let gyeonggi: CountryInfo
+    let gangwon: CountryInfo
+    let chungbuk: CountryInfo
+    let chungnam: CountryInfo
+    let jeonbuk: CountryInfo
+    let jeonnam: CountryInfo
+    let gyeongbuk: CountryInfo
+    let gyeongnam: CountryInfo
+    let jeju: CountryInfo
 }
 
-struct countryInfo: Decodable {
+struct CountryInfo: Decodable {
     let countryName : String
     let newCase : String
     let totalCase : String

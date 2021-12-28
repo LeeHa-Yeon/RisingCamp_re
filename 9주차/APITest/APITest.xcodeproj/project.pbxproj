@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FB27789F5900AD595A /* CoronaResponse.swift */; };
 		9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */; };
+		9F7968022779C92E00AD595A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7968012779C92E00AD595A /* TestViewController.swift */; };
 		9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */; };
 		9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */; };
-		9F7D8C9C276E281500FCE4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9B276E281500FCE4A5 /* ViewController.swift */; };
 		9F7D8C9F276E281500FCE4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9D276E281500FCE4A5 /* Main.storyboard */; };
 		9F7D8CA1276E281700FCE4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */; };
 		9F7D8CA4276E281700FCE4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8CA2276E281700FCE4A5 /* LaunchScreen.storyboard */; };
@@ -22,10 +22,10 @@
 		27C8DC7E28E23FD41D2548E7 /* Pods-APITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITest.debug.xcconfig"; path = "Target Support Files/Pods-APITest/Pods-APITest.debug.xcconfig"; sourceTree = "<group>"; };
 		9F7967FB27789F5900AD595A /* CoronaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaResponse.swift; sourceTree = "<group>"; };
 		9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaAPIManager.swift; sourceTree = "<group>"; };
+		9F7968012779C92E00AD595A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		9F7D8C94276E281500FCE4A5 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F7D8C9B276E281500FCE4A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F7D8C9E276E281500FCE4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7D8CA3276E281700FCE4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +57,7 @@
 		9F7967F527789E3400AD595A /* Applications */ = {
 			isa = PBXGroup;
 			children = (
+				9F7D8CA2276E281700FCE4A5 /* LaunchScreen.storyboard */,
 				9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */,
 				9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */,
 			);
@@ -66,6 +67,7 @@
 		9F7967F627789E4000AD595A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -83,6 +85,7 @@
 		9F7967F827789F2100AD595A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F7D8C9D276E281500FCE4A5 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +93,7 @@
 		9F7967F927789F2B00AD595A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F7968012779C92E00AD595A /* TestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,10 +147,6 @@
 				9F7967F527789E3400AD595A /* Applications */,
 				9F7967F627789E4000AD595A /* Resource */,
 				9F7967F727789F0600AD595A /* Sources */,
-				9F7D8C9B276E281500FCE4A5 /* ViewController.swift */,
-				9F7D8C9D276E281500FCE4A5 /* Main.storyboard */,
-				9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */,
-				9F7D8CA2276E281700FCE4A5 /* LaunchScreen.storyboard */,
 				9F7D8CA5276E281700FCE4A5 /* Info.plist */,
 			);
 			path = APITest;
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7D8C9C276E281500FCE4A5 /* ViewController.swift in Sources */,
+				9F7968022779C92E00AD595A /* TestViewController.swift in Sources */,
 				9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */,
 				9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */,
 				9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */,

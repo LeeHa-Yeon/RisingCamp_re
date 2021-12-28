@@ -13,7 +13,7 @@ class CoronaAPIManager{
     private init() {}
     
     func requestCoronaCountryInfo(completion: @escaping (CoronaResponse)->(Void)){
-        let requestURL = "https://api.corona-19.kr/korea/country/new/?"
+        let requestURL = "https://api.corona-19.kr/korea/country/new/"
         let para = [
             "serviceKey" : "swSRfKpvFH2VADokn5XWhrBItUg9C4b6q"
         ]
