@@ -9,5 +9,5 @@ target 'APITest' do
   pod 'Then'
   pod 'lottie-ios'
   pod 'Alamofire', '~> 5.4'
-
+  pod 'NMapsMap'
 end
