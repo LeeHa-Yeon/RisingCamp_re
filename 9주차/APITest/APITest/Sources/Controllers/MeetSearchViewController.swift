@@ -77,13 +77,14 @@ class MeetSearchViewController: UIViewController {
                     self.kakaoManager.requestAroundCategory(category_group_code: self.selectedCategory, x: response.documents[0].x, y: response.documents[0].y) { response2 in
                         print(response2.documents)
                     }
+                    
+                    
                 }
             }else {
                 blackAlarm(messageStr: "카테고리를 선택해주세요.")
             }
         }
-        
-        
+
         
     }
     
