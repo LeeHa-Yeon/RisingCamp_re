@@ -77,7 +77,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V2-Py-3vA">
                                                 <rect key="frame" x="177" y="0.0" width="177" height="120"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="관광명소">
+                                                <buttonConfiguration key="configuration" style="plain" title="놀거리">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
@@ -138,6 +138,87 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="134.59821428571428"/>
         </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="75h-4v-5lP">
+            <objects>
+                <viewController storyboardIdentifier="ModalSB" id="0zk-mH-wSy" customClass="ModalViewController" customModule="APITest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbm-Ys-wW3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O92-qu-TT3">
+                                <rect key="frame" x="180" y="64" width="54" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5jk-7M-Ztm">
+                                <rect key="frame" x="104.5" y="129.5" width="205" height="71"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-hY-UoT">
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지점 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gso-oN-jPO">
+                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w31-QU-nbj">
+                                                <rect key="frame" x="163.5" y="0.0" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="UxE-ua-Z1g">
+                                        <rect key="frame" x="0.0" y="50.5" width="205" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McN-wi-vho">
+                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y1-eq-djR">
+                                                <rect key="frame" x="163.5" y="0.0" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P65-nb-GZq">
+                                <rect key="frame" x="30" y="260.5" width="354" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="홈페이지로 이동"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zkT-FO-cMd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zkT-FO-cMd" firstAttribute="trailing" secondItem="P65-nb-GZq" secondAttribute="trailing" constant="30" id="H1m-0I-qpI"/>
+                            <constraint firstItem="O92-qu-TT3" firstAttribute="top" secondItem="zkT-FO-cMd" secondAttribute="top" constant="20" id="Ws5-Vk-sRW"/>
+                            <constraint firstItem="P65-nb-GZq" firstAttribute="leading" secondItem="zkT-FO-cMd" secondAttribute="leading" constant="30" id="bLv-Ne-L1H"/>
+                            <constraint firstItem="5jk-7M-Ztm" firstAttribute="top" secondItem="O92-qu-TT3" secondAttribute="bottom" constant="40" id="fHB-MH-Hh2"/>
+                            <constraint firstItem="O92-qu-TT3" firstAttribute="centerX" secondItem="zbm-Ys-wW3" secondAttribute="centerX" id="n3J-qL-QwH"/>
+                            <constraint firstItem="5jk-7M-Ztm" firstAttribute="centerX" secondItem="zbm-Ys-wW3" secondAttribute="centerX" id="xMs-Z2-vvE"/>
+                            <constraint firstItem="P65-nb-GZq" firstAttribute="top" secondItem="5jk-7M-Ztm" secondAttribute="bottom" constant="60" id="xMx-4Z-3Ix"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="3y1-eq-djR" id="JQ0-Yc-0u2"/>
+                        <outlet property="nameLabel" destination="O92-qu-TT3" id="ybf-k5-w9G"/>
+                        <outlet property="phoneLabel" destination="w31-QU-nbj" id="oA4-HD-Fuf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHp-K8-ydN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4597" y="135"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="LTy-ZG-oMJ">
             <objects>
@@ -161,12 +242,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomContainerMargin" destination="ixU-Vv-0WP" id="dhV-f5-paq"/>
                         <outlet property="naverMapView" destination="BVu-wF-4Bg" id="BdX-Gg-GGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzX-DS-FlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2886" y="135"/>
+            <point key="canvasLocation" x="3845" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T5s-Ik-GiV">

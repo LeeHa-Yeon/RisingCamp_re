@@ -21,6 +21,7 @@
 		9F796816277B1BF500AD595A /* SubwayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796815277B1BF500AD595A /* SubwayRequest.swift */; };
 		9F796818277B234300AD595A /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796817277B234300AD595A /* CategoryResponse.swift */; };
 		9F79681A2780330A00AD595A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7968192780330A00AD595A /* MapViewController.swift */; };
+		9F79681C2780D94F00AD595A /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79681B2780D94F00AD595A /* ModalViewController.swift */; };
 		9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */; };
 		9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */; };
 		9F7D8C9F276E281500FCE4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9D276E281500FCE4A5 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		9F796815277B1BF500AD595A /* SubwayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayRequest.swift; sourceTree = "<group>"; };
 		9F796817277B234300AD595A /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
 		9F7968192780330A00AD595A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9F79681B2780D94F00AD595A /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		9F7D8C94276E281500FCE4A5 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				9F7968192780330A00AD595A /* MapViewController.swift */,
 				9F7968012779C92E00AD595A /* TestViewController.swift */,
 				9F79680B277B11C100AD595A /* MyPageViewController.swift */,
+				9F79681B2780D94F00AD595A /* ModalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				9F796806277B0C1300AD595A /* MeetSearchViewController.swift in Sources */,
 				9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */,
 				9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */,
+				9F79681C2780D94F00AD595A /* ModalViewController.swift in Sources */,
 				9F79681A2780330A00AD595A /* MapViewController.swift in Sources */,
 				9F796810277B189F00AD595A /* KakaoAPIManager.swift in Sources */,
 				9F796816277B1BF500AD595A /* SubwayRequest.swift in Sources */,

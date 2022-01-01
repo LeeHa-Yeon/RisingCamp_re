@@ -82,6 +82,7 @@ class MeetSearchViewController: UIViewController {
                     MapVC.defaultLng = response.documents[0].x
                     
                     self.kakaoManager.requestAroundCategory(category_group_code: self.selectedCategory, x: response.documents[0].x, y: response.documents[0].y) { response2 in
+                        print("확인",response2.documents)
                         MapVC.markInfo = response2.documents
                         MapVC.modalPresentationStyle = .fullScreen
                         self.navigationController?.pushViewController(MapVC, animated: true)

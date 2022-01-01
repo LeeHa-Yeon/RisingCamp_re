@@ -2,12 +2,14 @@ PODS:
   - Alamofire (5.5.0)
   - lottie-ios (3.3.0)
   - NMapsMap (3.14.0)
+  - PanModal (1.2.7)
   - Then (2.7.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
   - lottie-ios
   - NMapsMap
+  - PanModal
   - Then
 
 SPEC REPOS:
@@ -15,14 +17,16 @@ SPEC REPOS:
     - Alamofire
     - lottie-ios
     - NMapsMap
+    - PanModal
     - Then
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   NMapsMap: 61c2abfc409bbcdc91583ccc455a5b6f64c7414e
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 5c342158c1c0f827604e4723e799faf0273ba722
+PODFILE CHECKSUM: 77d8d02d0f619694874fce9b8c3cce7cca1d5ad6
 
 COCOAPODS: 1.11.2
