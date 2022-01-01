@@ -57,7 +57,7 @@ class MapViewController: UIViewController {
                     self?.dataSource.title = marker.userInfo["tag"] as! String
                     self?.infoWindow.open(with: marker)
 //                    self?.bottomContainerMargin.constant = 300
-                    self?.upModal(place: name, placeNumber: phone, placeAddress: address)
+                    self?.upModal(place: name, placeNumber: phone, placeAddress: address, placeURL: url)
                 } else {
                     // 이미 현재 마커에 정보 창이 열려있을 경우 닫음
 //                    self?.bottomContainerMargin.constant = self!.originalBottomMargin
@@ -77,12 +77,13 @@ class MapViewController: UIViewController {
         print("잇닝?")
     }
     
-    func upModal(place: String, placeNumber: String, placeAddress: String ){
+    func upModal(place: String, placeNumber: String, placeAddress: String, placeURL: String ){
         let storyboard = UIStoryboard(name: "MeetPlaceSearch", bundle: nil)
         let ModalVC = storyboard.instantiateViewController(withIdentifier: "ModalSB") as! ModalViewController
         ModalVC.nameValue = place
         ModalVC.phoneValue = placeNumber
         ModalVC.addressValue = placeAddress
+        ModalVC.webURL = placeURL
         self.presentPanModal(ModalVC)
     }
 }
