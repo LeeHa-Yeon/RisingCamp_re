@@ -72,13 +72,20 @@ class MeetSearchViewController: UIViewController {
         }else {
             
             if selectedCategory != "" {
+                
+                guard let MapVC = self.storyboard?.instantiateViewController(identifier: "MapSB") as? MapViewController else {
+                    return
+                }
+                
                 kakaoManager.requestSubwayInfo(query: subwayQuery) { response in
-                    print(response.documents)
+                    MapVC.defaultLat = response.documents[0].y
+                    MapVC.defaultLng = response.documents[0].x
+                    
                     self.kakaoManager.requestAroundCategory(category_group_code: self.selectedCategory, x: response.documents[0].x, y: response.documents[0].y) { response2 in
-                        print(response2.documents)
+                        MapVC.markInfo = response2.documents
+                        MapVC.modalPresentationStyle = .fullScreen
+                        self.navigationController?.pushViewController(MapVC, animated: true)
                     }
-                    
-                    
                 }
             }else {
                 blackAlarm(messageStr: "카테고리를 선택해주세요.")
