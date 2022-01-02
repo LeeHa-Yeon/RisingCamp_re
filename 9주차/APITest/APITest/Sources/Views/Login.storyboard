@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-TW-I3T">
+                                <rect key="frame" x="187.5" y="433" width="39" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="카카오"/>
+                                <connections>
+                                    <action selector="kakaoLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2KS-pi-XjH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TGM-TW-I3T" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WPN-m0-1wC"/>
+                            <constraint firstItem="TGM-TW-I3T" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="kLc-xf-OVb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
