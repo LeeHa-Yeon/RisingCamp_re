@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHp-K8-ydN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4891" y="135"/>
+            <point key="canvasLocation" x="4358" y="135"/>
         </scene>
         <!--WeatherSB-->
         <scene sceneID="YHL-NH-4OA">
@@ -228,7 +228,7 @@
                 <viewControllerPlaceholder storyboardName="Weather" referencedIdentifier="WeatherSB" id="0s9-gp-kRy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1q-jz-FZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4491" y="53"/>
+            <point key="canvasLocation" x="3729" y="58"/>
         </scene>
         <!--CoronaSB-->
         <scene sceneID="dW8-TN-iVI">
@@ -238,7 +238,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0L-In-L6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4486" y="207"/>
+            <point key="canvasLocation" x="3725" y="212"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="LTy-ZG-oMJ">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzX-DS-FlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3946" y="135"/>
+            <point key="canvasLocation" x="3093" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T5s-Ik-GiV">
