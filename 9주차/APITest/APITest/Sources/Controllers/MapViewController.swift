@@ -76,6 +76,12 @@ class MapViewController: UIViewController {
         infoWindow.close()
         print("잇닝?")
     }
+
+    
+    @IBSegueAction func SegueActionWeather(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
+        return WeatherViewController(coder: coder, lng: defaultLng, lat: defaultLat)
+    }
+    
     
     func upModal(place: String, placeNumber: String, placeAddress: String, placeURL: String ){
         let storyboard = UIStoryboard(name: "MeetPlaceSearch", bundle: nil)

@@ -77,7 +77,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V2-Py-3vA">
                                                 <rect key="frame" x="177" y="0.0" width="177" height="120"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="관광명소">
+                                                <buttonConfiguration key="configuration" style="plain" title="놀거리">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
@@ -222,13 +222,13 @@
             </objects>
             <point key="canvasLocation" x="4891" y="135"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--WeatherSB-->
         <scene sceneID="YHL-NH-4OA">
             <objects>
-                <viewControllerPlaceholder id="0s9-gp-kRy" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Weather" referencedIdentifier="WeatherSB" id="0s9-gp-kRy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1q-jz-FZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3899" y="-257"/>
+            <point key="canvasLocation" x="4491" y="53"/>
         </scene>
         <!--CoronaSB-->
         <scene sceneID="dW8-TN-iVI">
@@ -238,7 +238,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0L-In-L6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4209" y="-257"/>
+            <point key="canvasLocation" x="4486" y="207"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="LTy-ZG-oMJ">
@@ -271,6 +271,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="날씨"/>
+                                <connections>
+                                    <segue destination="0s9-gp-kRy" kind="presentation" destinationCreationSelector="SegueActionWeather:sender:segueIdentifier:" id="r10-WG-rSy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="thY-bK-N4b"/>
@@ -294,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzX-DS-FlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4078" y="135"/>
+            <point key="canvasLocation" x="3946" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T5s-Ik-GiV">
