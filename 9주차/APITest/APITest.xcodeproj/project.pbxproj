@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F7967FC27789F5900AD595A /* CoronaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FB27789F5900AD595A /* CoronaResponse.swift */; };
 		9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */; };
-		9F7968022779C92E00AD595A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7968012779C92E00AD595A /* TestViewController.swift */; };
+		9F7968022779C92E00AD595A /* CoronaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7968012779C92E00AD595A /* CoronaViewController.swift */; };
 		9F796804277B0BD900AD595A /* MeetPlaceSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F796803277B0BD900AD595A /* MeetPlaceSearch.storyboard */; };
 		9F796806277B0C1300AD595A /* MeetSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796805277B0C1300AD595A /* MeetSearchViewController.swift */; };
 		9F796808277B0C6200AD595A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F796807277B0C6200AD595A /* Login.storyboard */; };
@@ -22,9 +22,10 @@
 		9F796818277B234300AD595A /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F796817277B234300AD595A /* CategoryResponse.swift */; };
 		9F79681A2780330A00AD595A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7968192780330A00AD595A /* MapViewController.swift */; };
 		9F79681C2780D94F00AD595A /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79681B2780D94F00AD595A /* ModalViewController.swift */; };
+		9F79681E27819C9D00AD595A /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F79681D27819C9D00AD595A /* Weather.storyboard */; };
 		9F7D8C98276E281500FCE4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */; };
 		9F7D8C9A276E281500FCE4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */; };
-		9F7D8C9F276E281500FCE4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9D276E281500FCE4A5 /* Main.storyboard */; };
+		9F7D8C9F276E281500FCE4A5 /* Corona.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9D276E281500FCE4A5 /* Corona.storyboard */; };
 		9F7D8CA1276E281700FCE4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */; };
 		9F7D8CA4276E281700FCE4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8CA2276E281700FCE4A5 /* LaunchScreen.storyboard */; };
 		CEB5332CBA7AEAB07BD05D71 /* Pods_APITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8FC784A555B58842C70DB0 /* Pods_APITest.framework */; };
@@ -34,7 +35,7 @@
 		27C8DC7E28E23FD41D2548E7 /* Pods-APITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITest.debug.xcconfig"; path = "Target Support Files/Pods-APITest/Pods-APITest.debug.xcconfig"; sourceTree = "<group>"; };
 		9F7967FB27789F5900AD595A /* CoronaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaResponse.swift; sourceTree = "<group>"; };
 		9F7967FF2778E58F00AD595A /* CoronaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaAPIManager.swift; sourceTree = "<group>"; };
-		9F7968012779C92E00AD595A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9F7968012779C92E00AD595A /* CoronaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaViewController.swift; sourceTree = "<group>"; };
 		9F796803277B0BD900AD595A /* MeetPlaceSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetPlaceSearch.storyboard; sourceTree = "<group>"; };
 		9F796805277B0C1300AD595A /* MeetSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSearchViewController.swift; sourceTree = "<group>"; };
 		9F796807277B0C6200AD595A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -47,10 +48,11 @@
 		9F796817277B234300AD595A /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
 		9F7968192780330A00AD595A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9F79681B2780D94F00AD595A /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		9F79681D27819C9D00AD595A /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		9F7D8C94276E281500FCE4A5 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D8C97276E281500FCE4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D8C99276E281500FCE4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F7D8C9E276E281500FCE4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F7D8C9E276E281500FCE4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Corona.storyboard; sourceTree = "<group>"; };
 		9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7D8CA3276E281700FCE4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F7D8CA5276E281700FCE4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +114,8 @@
 				9F796807277B0C6200AD595A /* Login.storyboard */,
 				9F796803277B0BD900AD595A /* MeetPlaceSearch.storyboard */,
 				9F79680D277B11D000AD595A /* MyPage.storyboard */,
-				9F7D8C9D276E281500FCE4A5 /* Main.storyboard */,
+				9F7D8C9D276E281500FCE4A5 /* Corona.storyboard */,
+				9F79681D27819C9D00AD595A /* Weather.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,7 +126,7 @@
 				9F796809277B0C7700AD595A /* LoginViewController.swift */,
 				9F796805277B0C1300AD595A /* MeetSearchViewController.swift */,
 				9F7968192780330A00AD595A /* MapViewController.swift */,
-				9F7968012779C92E00AD595A /* TestViewController.swift */,
+				9F7968012779C92E00AD595A /* CoronaViewController.swift */,
 				9F79680B277B11C100AD595A /* MyPageViewController.swift */,
 				9F79681B2780D94F00AD595A /* ModalViewController.swift */,
 			);
@@ -273,10 +276,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F79681E27819C9D00AD595A /* Weather.storyboard in Resources */,
 				9F7D8CA4276E281700FCE4A5 /* LaunchScreen.storyboard in Resources */,
 				9F79680E277B11D000AD595A /* MyPage.storyboard in Resources */,
 				9F7D8CA1276E281700FCE4A5 /* Assets.xcassets in Resources */,
-				9F7D8C9F276E281500FCE4A5 /* Main.storyboard in Resources */,
+				9F7D8C9F276E281500FCE4A5 /* Corona.storyboard in Resources */,
 				9F796808277B0C6200AD595A /* Login.storyboard in Resources */,
 				9F796804277B0BD900AD595A /* MeetPlaceSearch.storyboard in Resources */,
 			);
@@ -332,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F79680A277B0C7700AD595A /* LoginViewController.swift in Sources */,
-				9F7968022779C92E00AD595A /* TestViewController.swift in Sources */,
+				9F7968022779C92E00AD595A /* CoronaViewController.swift in Sources */,
 				9F796818277B234300AD595A /* CategoryResponse.swift in Sources */,
 				9F796806277B0C1300AD595A /* MeetSearchViewController.swift in Sources */,
 				9F7968002778E58F00AD595A /* CoronaAPIManager.swift in Sources */,
@@ -351,12 +355,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9F7D8C9D276E281500FCE4A5 /* Main.storyboard */ = {
+		9F7D8C9D276E281500FCE4A5 /* Corona.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9F7D8C9E276E281500FCE4A5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Corona.storyboard;
 			sourceTree = "<group>";
 		};
 		9F7D8CA2276E281700FCE4A5 /* LaunchScreen.storyboard */ = {
