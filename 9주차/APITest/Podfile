@@ -13,4 +13,5 @@ target 'APITest' do
   pod 'PanModal'
   pod 'KakaoSDKAuth'  
   pod 'KakaoSDKUser'
+  pod 'Kingfisher'
 end

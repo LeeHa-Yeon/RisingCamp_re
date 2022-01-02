@@ -11,6 +11,7 @@ PODS:
     - KakaoSDKCommon/Common (= 2.8.4)
   - KakaoSDKUser (2.8.4):
     - KakaoSDKAuth (= 2.8.4)
+  - Kingfisher (7.1.2)
   - lottie-ios (3.3.0)
   - NMapsMap (3.14.0)
   - PanModal (1.2.7)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.4)
   - KakaoSDKAuth
   - KakaoSDKUser
+  - Kingfisher
   - lottie-ios
   - NMapsMap
   - PanModal
@@ -31,6 +33,7 @@ SPEC REPOS:
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
+    - Kingfisher
     - lottie-ios
     - NMapsMap
     - PanModal
@@ -41,11 +44,12 @@ SPEC CHECKSUMS:
   KakaoSDKAuth: b9b693995f98b1821ccd22b39d383e1dede5ca45
   KakaoSDKCommon: 33c9902ee9ce13e9d1cac3549896406229836ff5
   KakaoSDKUser: d878977e0ba6b365cfeac3b6319cdf4231713bea
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   NMapsMap: 61c2abfc409bbcdc91583ccc455a5b6f64c7414e
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 77c478d15ca53a1142d67d0acd0864d8349a370e
+PODFILE CHECKSUM: e7a00c7dbe9c2fb430d5a87c8532308c9b5a8f28
 
 COCOAPODS: 1.11.2
