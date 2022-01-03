@@ -31,6 +31,7 @@
 		9F7D8C9F276E281500FCE4A5 /* Corona.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8C9D276E281500FCE4A5 /* Corona.storyboard */; };
 		9F7D8CA1276E281700FCE4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */; };
 		9F7D8CA4276E281700FCE4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D8CA2276E281700FCE4A5 /* LaunchScreen.storyboard */; };
+		9F964FE42782B77C00724B5E /* global.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F964FE32782B77C00724B5E /* global.json */; };
 		CEB5332CBA7AEAB07BD05D71 /* Pods_APITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8FC784A555B58842C70DB0 /* Pods_APITest.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7D8CA3276E281700FCE4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F7D8CA5276E281700FCE4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F964FE32782B77C00724B5E /* global.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = global.json; sourceTree = "<group>"; };
 		BC8FC784A555B58842C70DB0 /* Pods_APITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AF6CF83FB16E70EDAA687B /* Pods-APITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITest.release.xcconfig"; path = "Target Support Files/Pods-APITest/Pods-APITest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 		9F7967F627789E4000AD595A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F964FE32782B77C00724B5E /* global.json */,
 				9F7D8CA0276E281700FCE4A5 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -289,6 +292,7 @@
 				9F7D8CA4276E281700FCE4A5 /* LaunchScreen.storyboard in Resources */,
 				9F79680E277B11D000AD595A /* MyPage.storyboard in Resources */,
 				9F7D8CA1276E281700FCE4A5 /* Assets.xcassets in Resources */,
+				9F964FE42782B77C00724B5E /* global.json in Resources */,
 				9F7D8C9F276E281500FCE4A5 /* Corona.storyboard in Resources */,
 				9F796808277B0C6200AD595A /* Login.storyboard in Resources */,
 				9F796804277B0BD900AD595A /* MeetPlaceSearch.storyboard in Resources */,

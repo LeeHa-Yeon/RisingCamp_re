@@ -11,15 +11,15 @@
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="APITest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginSB" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="APITest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-TW-I3T">
-                                <rect key="frame" x="187.5" y="433" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-TW-I3T">
+                                <rect key="frame" x="57" y="717" width="300" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="카카오"/>
+                                <state key="normal" image="kakao_login_medium_wide"/>
                                 <connections>
                                     <action selector="kakaoLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2KS-pi-XjH"/>
                                 </connections>
@@ -29,7 +29,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TGM-TW-I3T" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WPN-m0-1wC"/>
-                            <constraint firstItem="TGM-TW-I3T" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="kLc-xf-OVb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TGM-TW-I3T" secondAttribute="bottom" constant="100" id="nbq-eX-L5N"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,6 +39,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="kakao_login_medium_wide" width="300" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
