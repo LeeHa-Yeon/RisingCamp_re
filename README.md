@@ -77,10 +77,10 @@ https://pleasant-almandine-db5.notion.site/Rising-Camp-1-1-1f52936c1fbc41daa4674
 |6**주차** |11.26-12.02| **Thread** | 타이머를 이용하며 농사짓기 앱 만들기 | ⌛️ | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6주차/README/6주차">이동하기</a> |
 |7**주차** |12.03-12.09| **DB** | 스레드게임에 User Defaults로 앱을 고도화 | 🛠 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6주차/README/7주차">이동하기</a> |
 |8**주차** |12.03-12.09| **Animation** | 스레드게임에 다양한 애니메이션 효과 적용 | 🕹 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/6주차/README/8주차">이동하기</a> |
-|9**주차** |12.24-12.30| **Network Intro & API**  | | | |
-|**10주차** |12.30-12.31| **Token & Restful** | | | |
-|11**주차** |01.07-01.21|  **Rising Test** | | | |
-|12**주차** |01.07-01.21|  **Rising Test** | | | |
+|9**주차** |12.24-12.30| **Network Intro & API**  | 다양한 API로 "여기서 만나자" 앱 만들기 | 📍 | <a href="https://github.com/LeeHa-Yeon/RisingCamp_re/tree/main/9%EC%A3%BC%EC%B0%A8">이동하기</a> |
+|**10주차** |12.30-12.31| **Token & Restful** | RESTful API 및 로그인 방식의 이해(Session-Cookie, oAuth, JWT)에 대해 학습 | 📖 |  |
+|11**주차** |01.08-01.21|  **Rising Test** | | | |
+|12**주차** |01.08-01.21|  **Rising Test** | | | |
 
 
 # 🗣️ 수료 결과 발표
